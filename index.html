@@ -1,46 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Teshia Massage | Holistic Bodywork & Deep Tissue | Escondido, CA</title>
-  <meta name="description" content="Teshia Massage offers holistic bodywork and deep tissue therapy in Escondido, CA. Restore your body, renew your mind, and reconnect your spirit through intentional self-care." />
-  <meta name="theme-color" content="#0e2a25" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Teshia Massage | Holistic Bodywork & Deep Tissue | Escondido, CA</title>
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Teshia Massage | Holistic Bodywork & Deep Tissue" />
-  <meta property="og:description" content="Reset your mind, body, and soul through intentional self-care in Escondido." />
-  <meta property="og:type" content="website" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-  --bg0:#0b0b0c;
-  --bg1:#111114;
-  --bg2:#161619;
-
+  --bg:#0b0b0c;
+  --bg2:#151518;
   --ink:#f5f5f5;
-  --muted:rgba(245,245,245,.72);
-  --muted2:rgba(245,245,245,.55);
-
+  --muted:rgba(255,255,255,.65);
   --line:rgba(255,255,255,.08);
-  --soft:rgba(255,255,255,.05);
-  --soft2:rgba(255,255,255,.07);
-
-  --shadow:0 20px 60px rgba(0,0,0,.65);
-  --shadow2:0 12px 35px rgba(0,0,0,.45);
-
   --accent:#c6a85e;
-
-  --radius:20px;
-  --radius2:28px;
-  --max:1160px;
-  --ease:cubic-bezier(.2,.8,.2,1);
+  --radius:18px;
 }
 
 *{box-sizing:border-box}
@@ -48,29 +25,14 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
+  background:linear-gradient(180deg,var(--bg),var(--bg2));
   color:var(--ink);
-  background:linear-gradient(180deg,var(--bg0),var(--bg2));
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.65;
-  overflow-x:hidden;
+  font-family:Inter,system-ui;
+  line-height:1.6;
 }
 
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 20px;
-}
-
-.srOnly{
-  position:absolute!important;
-  width:1px;height:1px;
-  padding:0;margin:-1px;
-  overflow:hidden;clip:rect(0,0,0,0);
-  white-space:nowrap;border:0;
-}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:auto;padding:0 20px}
 
 /* HEADER */
 
@@ -78,8 +40,7 @@ img{max-width:100%;display:block}
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(14,14,16,.95);
-  backdrop-filter:blur(18px);
+  background:#0b0b0c;
   border-bottom:1px solid var(--line);
 }
 
@@ -87,54 +48,33 @@ img{max-width:100%;display:block}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
   padding:16px 0;
 }
 
-/* BRAND */
-
 .brand{
   display:flex;
+  gap:10px;
   align-items:center;
-  gap:12px;
-}
-
-.brand__mark{
-  width:42px;
-  height:42px;
-  border-radius:14px;
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--line);
-  display:grid;
-  place-items:center;
-  color:var(--accent);
-}
-
-.brand__text{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
 }
 
 .brand__name{
   font-family:Fraunces,serif;
-  font-weight:600;
   font-size:16px;
-  line-height:1.1;
+  font-weight:600;
 }
 
 .brand__tag{
-  font-size:12px;
-  letter-spacing:.08em;
+  font-size:11px;
+  color:var(--muted);
   text-transform:uppercase;
-  color:var(--muted2);
+  letter-spacing:.08em;
 }
 
 .brand__micro{
-  font-size:11px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
+  font-size:10px;
   color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.18em;
 }
 
 /* NAV */
@@ -142,1457 +82,218 @@ img{max-width:100%;display:block}
 .nav{
   display:flex;
   gap:18px;
-  align-items:center;
 }
 
 .nav a{
   font-size:13px;
   color:var(--muted);
-  padding:8px 10px;
-  border-radius:10px;
-  transition:180ms var(--ease);
 }
 
 .nav a:hover{
   color:var(--ink);
-  background:rgba(255,255,255,.06);
 }
 
-/* CTA BUTTONS */
-
-.header__cta{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
+/* BUTTONS */
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
   border-radius:999px;
-  padding:11px 16px;
+  padding:10px 16px;
   font-size:13px;
   font-weight:600;
-  border:1px solid rgba(198,168,94,.45);
+  border:1px solid var(--accent);
   color:var(--accent);
-  background:rgba(255,255,255,.04);
-  transition:200ms var(--ease);
+  background:transparent;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .btn:hover{
   background:var(--accent);
-  color:#0b0b0c;
-  transform:translateY(-1px);
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  color:#000;
 }
 
-.btn--ghost{
-  border-color:var(--line);
-  color:var(--ink);
-  background:rgba(255,255,255,.03);
-}
-
-.btn--ghost:hover{
-  background:rgba(255,255,255,.08);
-}
-
-.btn--full{width:100%}
-
-/* MOBILE MENU BUTTON */
+/* MOBILE */
 
 .menuBtn{
-  width:42px;
-  height:42px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
   display:none;
-  place-items:center;
+  background:none;
+  border:1px solid var(--line);
+  padding:8px;
+  border-radius:10px;
   cursor:pointer;
-  transition:200ms var(--ease);
-}
-
-.menuBtn:hover{
-  background:rgba(255,255,255,.08);
 }
 
 .menuBtn span{
   display:block;
-  width:18px;
+  width:20px;
   height:2px;
-  background:var(--ink);
-  border-radius:99px;
-  margin:3px 0;
-  transition:220ms var(--ease);
+  background:#fff;
+  margin:4px 0;
 }
 
-/* MOBILE RESPONSIVE */
+.mobileMenu{
+  display:none;
+  border-top:1px solid var(--line);
+}
 
-@media (max-width:900px){
+.mobileMenu a{
+  display:block;
+  padding:14px 0;
+  color:var(--muted);
+}
 
+@media(max-width:900px){
   .nav{display:none}
-  .menuBtn{display:grid}
-
-  .container{
-    padding:0 16px;
-  }
-
+  .menuBtn{display:block}
 }
 
-    .mobileMenu{
-      border-top: 1px solid var(--line);
-      background: rgba(7,21,19,.72);
-      backdrop-filter: blur(18px);
-    }
-    .mobileMenu__inner{
-      display:grid;
-      gap: 10px;
-      padding: 14px 0 18px;
-    }
-    .mobileMenu__inner a{
-      padding: 12px 12px;
-      border-radius: 14px;
-      color: rgba(238,245,242,.92);
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .mobileMenu__inner a:hover{background: rgba(255,255,255,.06)}
-    .mobileMenu__inner .btn{justify-content:center}
+/* HERO */
 
-    /* HERO */
-    main{position:relative}
-    .hero{
-      padding: 74px 0 34px;
-    }
-    .hero__inner{
-      display:grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: 22px;
-      align-items:stretch;
-    }
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(132,191,178,.22);
-      background: rgba(255,255,255,.03);
-      color: rgba(132,191,178,.96);
-      letter-spacing: .10em;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    h1{
-      margin: 16px 0 12px;
-      font-family: Fraunces, serif;
-      font-size: clamp(40px, 4.8vw, 66px);
-      line-height: 1.04;
-      letter-spacing: -0.02em;
-      font-weight: 650;
-    }
-    .h1__accent{color: rgba(214,180,106,.96)}
-    .lead{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 62ch;
-    }
-    .hero__actions{
-      display:flex;
-      gap: 12px;
-      flex-wrap:wrap;
-      margin: 18px 0 10px;
-    }
-
-    .hero__badges{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 12px;
-    }
-
-    .badge{
-      display:flex;
-      gap: 10px;
-      padding: 14px 14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 14px 28px rgba(0,0,0,.18);
-    }
-    .badge__icon{
-      width: 34px;
-      height: 34px;
-      border-radius: 14px;
-      border: 1px solid rgba(214,180,106,.22);
-      background: rgba(214,180,106,.08);
-      display:grid;
-      place-items:center;
-      color: rgba(214,180,106,.92);
-      flex: 0 0 auto;
-    }
-    .badge__icon svg{width:18px;height:18px}
-    .badge__text strong{
-      display:block;
-      font-size: 13px;
-      margin-bottom: 2px;
-      color: rgba(238,245,242,.95);
-    }
-    .badge__text span{
-      display:block;
-      font-size: 12px;
-      color: var(--muted2);
-    }
-
-    .hero__panel{
-      display:flex;
-      flex-direction:column;
-      gap: 12px;
-    }
-
-    .glassCard{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 20px;
-      overflow:hidden;
-      position:relative;
-    }
-    .glassCard::before{
-      content:"";
-      position:absolute;
-      inset:-120px -160px auto auto;
-      width: 360px;
-      height: 360px;
-      background:
-        radial-gradient(circle at 35% 35%, rgba(214,180,106,.22), transparent 62%),
-        radial-gradient(circle at 70% 70%, rgba(132,191,178,.18), transparent 58%);
-      opacity:.9;
-      filter: blur(2px);
-      pointer-events:none;
-    }
-    .glassCard__top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 10px;
-      position:relative;
-    }
-    .glassCard__title h2{
-      margin:0 0 4px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-      letter-spacing:-0.01em;
-    }
-    .glassCard__title p{
-      margin:0;
-      font-size: 13px;
-      color: var(--muted2);
-    }
-    .glassCard__chip{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(214,180,106,.24);
-      background: rgba(214,180,106,.08);
-      color: rgba(214,180,106,.95);
-      font-size: 12px;
-      letter-spacing:.10em;
-      text-transform: uppercase;
-      white-space:nowrap;
-      position:relative;
-    }
-
-    .checklist{
-      margin: 14px 0 14px;
-      padding: 0;
-      list-style: none;
-      display:grid;
-      gap: 10px;
-      position:relative;
-    }
-    .checklist li{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-      padding: 10px 10px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.02);
-      color: rgba(238,245,242,.92);
-      font-size: 13px;
-    }
-    .checklist li::before{
-      content:"✓";
-      display:inline-grid;
-      place-items:center;
-      width: 22px;
-      height: 22px;
-      border-radius: 10px;
-      border: 1px solid rgba(132,191,178,.20);
-      background: rgba(132,191,178,.10);
-      color: rgba(132,191,178,.95);
-      flex: 0 0 auto;
-      margin-top: 1px;
-      font-weight: 700;
-    }
-
-    .glassCard__cta{
-      display:grid;
-      gap: 10px;
-      position:relative;
-    }
-    .smallNote{
-      margin:0;
-      font-size: 12px;
-      color: var(--muted2);
-    }
-
-    .miniStats{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 16px 44px rgba(0,0,0,.18);
-      padding: 14px 16px;
-      display:grid;
-      gap: 10px;
-    }
-    .miniStats__item{
-      display:flex;
-      justify-content:space-between;
-      gap: 10px;
-      align-items:baseline;
-      padding: 10px 10px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.02);
-    }
-    .miniStats__label{
-      font-size: 12px;
-      letter-spacing:.12em;
-      text-transform: uppercase;
-      color: rgba(214,180,106,.92);
-      white-space:nowrap;
-    }
-    .miniStats__value{
-      font-size: 12px;
-      color: var(--muted);
-      text-align:right;
-    }
-
-    /* Section helpers */
-    .section{
-      padding: 70px 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .section--alt{
-      background: rgba(255,255,255,.02);
-    }
-    .sectionHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-family: Fraunces, serif;
-      font-size: 34px;
-      letter-spacing:-0.01em;
-    }
-    .sectionHead p{
-      margin:0;
-      color: var(--muted);
-      max-width: 70ch;
-      font-size: 14px;
-    }
-    .sectionHead--tight{margin-bottom: 12px}
-
-    /* Cards grid */
-    .cardsGrid{
-      display:grid;
-      grid-template-columns: repeat(12, minmax(0,1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .card{
-      grid-column: span 6;
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: 0 18px 46px rgba(0,0,0,.22);
-      padding: 18px;
-      position:relative;
-      overflow:hidden;
-  }
-
+.hero{
+  padding:70px 0;
 }
-    }
-    .card h3{
-      margin: 2px 0 6px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-    }
-    .card p{
-      margin:0 0 12px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .pillList{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style:none;
-    }
-    .pillList li{
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      color: rgba(238,245,242,.86);
-      font-size: 13px;
-    }
 
-    .card--highlight{
-      grid-column: span 12;
-      border-color: rgba(214,180,106,.22);
-      background:
-        radial-gradient(520px 220px at 12% 10%, rgba(214,180,106,.14), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-    }
-    .card__bottom{
-      display:flex;
-      gap: 10px;
-      flex-wrap:wrap;
-      margin-top: 12px;
-    }
-    .tag{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(214,180,106,.24);
-      background: rgba(214,180,106,.08);
-      color: rgba(214,180,106,.95);
-      font-size: 12px;
-      letter-spacing:.06em;
-      text-transform: uppercase;
-    }
+.hero h1{
+  font-family:Fraunces,serif;
+  font-size:clamp(36px,5vw,60px);
+  line-height:1.1;
+}
 
-    .sectionCTA{
-      margin-top: 16px;
-      border-radius: var(--radius2);
-      border: 1px solid rgba(214,180,106,.18);
-      background:
-        radial-gradient(520px 220px at 88% 10%, rgba(214,180,106,.16), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap:wrap;
-    }
-    .sectionCTA__copy h3{
-      margin:0 0 6px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-    }
-    .sectionCTA__copy p{
-      margin:0;
-      color: var(--muted2);
-      font-size: 14px;
-    }
+.hero span{color:var(--accent)}
 
-    /* Two col + feature list */
-    .twoCol{
-      display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 18px;
-      align-items:start;
-    }
-    .twoCol--reverse{
-      grid-template-columns: .95fr 1.05fr;
-    }
+.lead{
+  color:var(--muted);
+  max-width:600px;
+  margin-top:15px;
+}
 
-    .featureList{
-      margin-top: 14px;
-      display:grid;
-      gap: 12px;
-    }
-    .feature{
-      display:flex;
-      gap: 12px;
-      padding: 14px 14px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .feature__icon{
-      width: 34px;
-      height: 34px;
-      border-radius: 14px;
-      border: 1px solid rgba(132,191,178,.20);
-      background: rgba(132,191,178,.10);
-      display:grid;
-      place-items:center;
-      color: rgba(132,191,178,.96);
-      flex: 0 0 auto;
-      font-weight: 900;
-    }
-    .feature h3{
-      margin: 0 0 3px;
-      font-family: Fraunces, serif;
-      font-size: 18px;
-    }
-    .feature p{
-      margin:0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+/* FORM */
 
-    .quoteCard{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(214,180,106,.20);
-      background:
-        radial-gradient(520px 260px at 30% 10%, rgba(214,180,106,.16), transparent 62%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-    .quoteCard__kicker{
-      margin:0 0 8px;
-      font-size: 12px;
-      letter-spacing:.14em;
-      text-transform: uppercase;
-      color: rgba(214,180,106,.95);
-    }
-    .quoteCard__quote{
-      margin:0 0 12px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-      line-height: 1.25;
-    }
-    .quoteCard__line{
-      height: 1px;
-      background: rgba(255,255,255,.10);
-      margin: 10px 0 10px;
-    }
-    .quoteCard__small{
-      margin:0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+form{
+  display:grid;
+  gap:12px;
+}
 
-    /* Timeline */
-    .timeline{
-      margin-top: 14px;
-      display:grid;
-      gap: 12px;
-    }
-    .timeline__item{
-      display:grid;
-      grid-template-columns: 16px 1fr;
-      gap: 12px;
-      align-items:start;
-      padding: 14px 14px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 16px 36px rgba(0,0,0,.16);
-    }
-    .timeline__dot{
-      width: 12px;
-      height: 12px;
-      margin-top: 7px;
-      border-radius: 50%;
-      background: rgba(214,180,106,.95);
-      box-shadow: 0 0 0 6px rgba(214,180,106,.12);
-    }
-    .timeline__content h3{
-      margin:0 0 4px;
-      font-family: Fraunces, serif;
-      font-size: 18px;
-    }
-    .timeline__content p{
-      margin:0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+input,textarea{
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#111;
+  color:#fff;
+}
 
-    /* Notice */
-    .notice{
-      margin-top: 14px;
-      display:flex;
-      gap: 12px;
-      padding: 16px 16px;
-      border-radius: var(--radius2);
-      border: 1px solid rgba(132,191,178,.20);
-      background: rgba(132,191,178,.08);
-    }
-    .notice__icon{
-      width: 40px;
-      height: 40px;
-      border-radius: 18px;
-      border: 1px solid rgba(132,191,178,.25);
-      background: rgba(132,191,178,.10);
-      display:grid;
-      place-items:center;
-      flex:0 0 auto;
-    }
-    .notice__content h3{
-      margin:0 0 4px;
-      font-family: Fraunces, serif;
-      font-size: 18px;
-    }
-    .notice__content p{
-      margin:0;
-      color: rgba(238,245,242,.88);
-      font-size: 14px;
-    }
+textarea{min-height:100px}
 
-    /* Studio grid */
-    .studioGrid{
-      margin-top: 14px;
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 12px;
-    }
-    .studioCard{
-      padding: 14px 14px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 16px 36px rgba(0,0,0,.16);
-    }
-    .studioCard h3{
-      margin:0 0 6px;
-      font-family: Fraunces, serif;
-      font-size: 18px;
-    }
-    .studioCard p{
-      margin:0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .locationCard{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(214,180,106,.18);
-      background:
-        radial-gradient(520px 260px at 75% 10%, rgba(214,180,106,.16), transparent 62%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 18px;
-      position:sticky;
-      top: 120px;
-      align-self:start;
-    }
-    .locationCard h3{
-      margin:0 0 8px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-    }
-    .infoRow{
-      display:flex;
-      justify-content:space-between;
-      gap: 10px;
-      padding: 10px 10px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.02);
-      margin-top: 10px;
-    }
-    .infoRow__label{
-      font-size: 12px;
-      letter-spacing:.12em;
-      text-transform: uppercase;
-      color: rgba(214,180,106,.95);
-      white-space:nowrap;
-    }
-    .infoRow__value{
-      font-size: 12px;
-      color: var(--muted);
-      text-align:right;
-    }
-    .locationCard__cta{
-      margin-top: 12px;
-      display:grid;
-      gap: 10px;
-    }
-
-    /* Accordion */
-    .accordion{
-      margin-top: 14px;
-      display:grid;
-      gap: 12px;
-    }
-    .accItem{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 16px 36px rgba(0,0,0,.16);
-      overflow:hidden;
-    }
-    .accItem summary{
-      list-style:none;
-      cursor:pointer;
-      padding: 16px 16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      font-weight: 600;
-      color: rgba(238,245,242,.92);
-    }
-    .accItem summary::-webkit-details-marker{display:none}
-    .accIcon{
-      width: 32px;
-      height: 32px;
-      border-radius: 14px;
-      border: 1px solid rgba(214,180,106,.22);
-      background: rgba(214,180,106,.08);
-      display:grid;
-      place-items:center;
-      color: rgba(214,180,106,.95);
-      flex:0 0 auto;
-      transition: transform 200ms var(--ease);
-    }
-    details[open] .accIcon{transform: rotate(45deg)}
-    .accBody{
-      padding: 0 16px 16px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .accBody p{margin:0}
-
-    /* Contact / form */
-    .contactGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .formCard{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 18px;
-      overflow:hidden;
-      position:relative;
-    }
-    .formCard h3{
-      margin:0 0 8px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-    }
-    .formCard p{margin:0 0 12px;color: var(--muted);font-size:14px}
-
-    form{
-      display:grid;
-      gap: 10px;
-    }
-    label{
-      font-size: 12px;
-      letter-spacing:.10em;
-      text-transform: uppercase;
-      color: rgba(238,245,242,.70);
-    }
-    input, select, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
-      color: rgba(238,245,242,.95);
-      font-size: 14px;
-      outline:none;
-      transition: 160ms var(--ease);
-    }
-    input:focus, select:focus, textarea:focus{
-      border-color: rgba(214,180,106,.55);
-      box-shadow: 0 0 0 4px rgba(214,180,106,.12);
-    }
-    textarea{min-height: 110px; resize: vertical}
-    .formRow{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .helpText{
-      font-size: 12px;
-      color: rgba(238,245,242,.62);
-      margin-top: 8px;
-    }
-
-    .noteCard{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(132,191,178,.18);
-      background: rgba(132,191,178,.06);
-      box-shadow: 0 16px 36px rgba(0,0,0,.16);
-      padding: 18px;
-    }
-    .noteCard h3{
-      margin:0 0 8px;
-      font-family: Fraunces, serif;
-      font-size: 20px;
-    }
-    .noteCard p{
-      margin:0 0 10px;
-      color: rgba(238,245,242,.84);
-      font-size: 14px;
-    }
-    .noteCard p:last-child{margin-bottom:0}
-
-    /* Footer */
-    footer{
-      padding: 34px 0 44px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(238,245,242,.60);
-      font-size: 13px;
-    }
-    .footGrid{
-      display:flex;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-    }
-    .footGrid strong{color: rgba(238,245,242,.92)}
-
-    /* Reveal on scroll */
-    .reveal{
-      opacity:1;
-      transform:none;
-      transition: 700ms var(--ease);
-    }
-    .reveal.show{
-      opacity:1;
-      transform:none;
-    }
-    
-    /* Responsive */
-    @media (max-width: 1020px){
-      .hero__inner{grid-template-columns: 1fr}
-      .locationCard{position:relative;top:auto}
-    }
-    @media (max-width: 900px){
-      .nav{display:none}
-      .menuBtn{display:grid}
-      .hero__badges{grid-template-columns:1fr}
-      .cardsGrid{grid-template-columns: 1fr}
-      .card{grid-column: span 12}
-      .twoCol, .twoCol--reverse{grid-template-columns: 1fr}
-      .studioGrid{grid-template-columns: 1fr}
-      .contactGrid{grid-template-columns:1fr}
-      .formRow{grid-template-columns:1fr}
-    }
-
-    /* Skip link */
-    .skip{
-      position:absolute;
-      left:-999px; top:auto;
-      width:1px; height:1px;
-      overflow:hidden;
-      z-index:999;
-    }
-    .skip:focus{
-      left: 16px; top: 16px;
-      width:auto; height:auto;
-      background: rgba(255,255,255,.95);
-      color: #071513;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,.12);
-    }
-  </style>
-
-  <!-- LocalBusiness schema (fill address/phone/email later) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Teshia Massage",
-    "description":"Holistic bodywork and deep tissue therapy in Escondido, CA. Boutique restorative wellness studio.",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Escondido",
-      "addressRegion":"CA",
-      "addressCountry":"US"
-    },
-    "areaServed":"Escondido, CA"
-  }
-  </script>
+</style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Decorative background -->
-  <div class="bg" aria-hidden="true">
-    <div class="orb orb--1"></div>
-    <div class="orb orb--2"></div>
-    <div class="orb orb--3"></div>
-    <div class="gridGlow"></div>
+<header class="header">
+  <div class="container header__inner">
+    
+    <div class="brand">
+      <div>
+        <div class="brand__name">Teshia Massage</div>
+        <div class="brand__tag">Holistic Bodywork • Deep Tissue • Escondido</div>
+        <div class="brand__micro">By Appointment Only</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#story">My Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn" href="#contact">Schedule</a>
+
+    <button class="menuBtn" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
   </div>
 
+  <div class="container mobileMenu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#story">My Story</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+<main>
 
-  <!-- Navigation -->
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Teshia Massage Home">
-        <span class="brand__mark" aria-hidden="true">
-          <!-- Minimal monogram-style mark -->
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 1.5C6.65 1.5 1.5 6.65 1.5 13S6.65 24.5 13 24.5 24.5 19.35 24.5 13 19.35 1.5 13 1.5Z" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M8 14.2C9.1 11.2 10.9 9.8 13 9.8c2.6 0 4.9 2.2 5 6.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-            <path d="M9.2 16.9c1.2 1.7 2.6 2.6 4.1 2.6 1.6 0 3.1-.9 4.5-2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="brand__text">
-          <span class="brand__name">Teshia Massage</span>
-          <span class="brand__tag">Holistic Bodywork • Deep Tissue • Escondido</span>
-          <span class="brand__micro">By Appointment Only</span>
-        </span>
-      </a>
+<section class="hero">
+  <div class="container">
+    <h1>
+      Restore your body.<br>
+      Renew your mind.<br>
+      <span>Reconnect your spirit.</span>
+    </h1>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#story">My Story</a>
-        <a href="#studio">The Studio</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <p class="lead">
+      I am a holistic health practitioner and deep tissue specialist who blends multiple therapeutic modalities to support the body’s natural healing process.
+    </p>
 
-      <div class="header__cta">
-        <a class="btn btn--ghost" href="#services">Explore</a>
-        <a class="btn" href="#contact">Schedule</a>
-      </div>
+    <a class="btn" href="#contact">Schedule a Session</a>
+  </div>
+</section>
 
-      <button class="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<section id="contact" class="hero">
+  <div class="container">
+    <h2>Schedule Your Session</h2>
 
-    <!-- Mobile menu -->
-    <div class="mobileMenu" hidden>
-      <div class="container mobileMenu__inner">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#story">My Story</a>
-        <a href="#studio">The Studio</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Schedule / Contact</a>
-        <a class="btn btn--full" href="#contact">Request Appointment</a>
-      </div>
-    </div>
-  </header>
+    <form id="bookingForm">
+      <input id="name" type="text" placeholder="Full Name" required>
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="phone" type="tel" placeholder="Phone">
+      <textarea id="message" placeholder="Preferred dates & notes"></textarea>
 
-  <!-- Main -->
-  <main id="main">
-    <!-- Hero -->
-    <section id="top" class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy reveal">
-          <p class="kicker">Reset your mind, body, and soul through intentional self-care.</p>
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
 
-          <h1>
-            Restore your body.<br />
-            Renew your mind.<br />
-            <span class="h1__accent">Reconnect your spirit.</span>
-          </h1>
+</main>
+<script>
 
-          <p class="lead">
-            I am a holistic health practitioner and deep tissue specialist who blends multiple therapeutic modalities to support the body’s natural healing process.
-            My mission is to encourage repeated, intentional self-care that nurtures physical, emotional, and overall wellness through customized bodywork.
-          </p>
+document.getElementById("year")?.textContent = new Date().getFullYear();
 
-          <div class="hero__actions">
-            <a class="btn" href="#contact">
-              Schedule a Session
-              <span class="btn__icon" aria-hidden="true">→</span>
-            </a>
-            <a class="btn btn--ghost" href="#services">View modalities</a>
-          </div>
+/* MOBILE MENU TOGGLE */
 
-          <div class="hero__badges" role="list" aria-label="Highlights">
-            <div class="badge" role="listitem">
-              <span class="badge__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 10l4-2 4 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <span class="badge__text">
-                <strong>Customized care</strong>
-                <span>Built around your needs</span>
-              </span>
-            </div>
+const toggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
-            <div class="badge" role="listitem">
-              <span class="badge__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 12c2-5 6-8 8-8s6 3 8 8c-2 5-6 8-8 8s-6-3-8-8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 9.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-              </span>
-              <span class="badge__text">
-                <strong>Therapeutic + spa</strong>
-                <span>Results with relaxation</span>
-              </span>
-            </div>
+toggle.addEventListener("click", function(){
+  if(mobileMenu.style.display === "block"){
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "block";
+  }
+});
 
-            <div class="badge" role="listitem">
-              <span class="badge__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 19 11c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </span>
-              <span class="badge__text">
-                <strong>Peaceful studio</strong>
-                <span>Clean, calm environment</span>
-              </span>
-            </div>
-          </div>
-        </div>
+/* WORKING FORM */
 
-        <div class="hero__panel reveal">
-          <div class="glassCard">
-            <div class="glassCard__top">
-              <div class="glassCard__title">
-                <h2>What to expect</h2>
-                <p>Intentional care in a supportive space.</p>
-              </div>
-              <div class="glassCard__chip">Suite 4</div>
-            </div>
+const BUSINESS_EMAIL = "3dudes1life@gmail.com";
 
-            <ul class="checklist">
-              <li>Brief intake + goals (pain, stress, mobility, recovery)</li>
-              <li>Customized session using integrated modalities</li>
-              <li>Deep, calming breaths to support nervous system reset</li>
-              <li>Aftercare guidance to support lasting results</li>
-            </ul>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-            <div class="glassCard__cta">
-              <a class="btn btn--full" href="#contact">Schedule now</a>
-              <p class="smallNote">Self-care isn’t a luxury — it’s essential.</p>
-            </div>
-          </div>
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
 
-          <div class="miniStats">
-            <div class="miniStats__item">
-              <span class="miniStats__label">Focus</span>
-              <span class="miniStats__value">Stress relief • Mobility • Renewal</span>
-            </div>
-            <div class="miniStats__item">
-              <span class="miniStats__label">Style</span>
-              <span class="miniStats__value">Holistic • Faith-centered • Grounded</span>
-            </div>
-          </div>
-        </div>
+  const subject = encodeURIComponent("Appointment Request — Teshia Massage");
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone: " + phone + "\n\n" +
+    message
+  );
 
-      </div>
-    </section>
+  window.location.href = "mailto:" + BUSINESS_EMAIL + "?subject=" + subject + "&body=" + body;
+});
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <h2>Services & Modalities</h2>
-          <p>
-            At Teshia Massage, every session is thoughtfully designed using a blend of therapeutic and spa-based modalities
-            to support healing, mobility, and deep relaxation.
-          </p>
-        </div>
-
-        <div class="cardsGrid">
-          <article class="card reveal">
-            <h3>Therapeutic Bodywork</h3>
-            <p>Focused care for chronic tension, pain patterns, muscular imbalances, and restricted movement.</p>
-            <ul class="pillList" aria-label="Therapeutic modalities">
-              <li>Deep Tissue Techniques</li>
-              <li>Myofascial Release</li>
-              <li>Swedish & Therapeutic Massage</li>
-              <li>Passive Joint Movement</li>
-              <li>Therapeutic Stretching</li>
-            </ul>
-          </article>
-
-          <article class="card reveal">
-            <h3>Nervous System Reset</h3>
-            <p>Gentle, restorative options to calm stress and support whole-body balance.</p>
-            <ul class="pillList" aria-label="Reset modalities">
-              <li>Cranial Sacral Therapy</li>
-              <li>Somatic Bodywork</li>
-              <li>Aromatherapy Integration</li>
-              <li>Mind–body calming techniques</li>
-              <li>Intentional grounding</li>
-            </ul>
-          </article>
-
-          <article class="card reveal">
-            <h3>Signature Spa Therapies</h3>
-            <p>Mineral-rich applications curated to promote circulation, rejuvenation, detoxification, and glow.</p>
-            <ul class="pillList" aria-label="Spa modalities">
-              <li>Mineral-rich Mud Wraps</li>
-              <li>Nourishing Seaweed Gel Applications</li>
-              <li>Salt Treatments</li>
-              <li>Glow Brushing</li>
-              <li>Reflexology</li>
-            </ul>
-          </article>
-
-          <article class="card card--highlight reveal">
-            <h3>Traditional Oriental Dynamic Cupping</h3>
-            <p>
-              An ancient method that improves circulation, relieves muscle tension, and supports detoxification.
-              Ideal for stubborn tightness, recovery, and deeper release.
-            </p>
-            <div class="card__bottom">
-              <span class="tag">Client favorite</span>
-              <span class="tag">Circulation + release</span>
-              <span class="tag">Recovery support</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="sectionCTA reveal">
-          <div class="sectionCTA__copy">
-            <h3>🌿 Personalized care. Purposeful touch. Lasting results.</h3>
-            <p>Schedule your customized session today and experience true restorative wellness.</p>
-          </div>
-          <a class="btn" href="#contact">Schedule</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Approach -->
-    <section id="approach" class="section section--alt">
-      <div class="container">
-        <div class="twoCol">
-          <div class="reveal">
-            <div class="sectionHead sectionHead--tight">
-              <h2>Our Therapeutic Approach</h2>
-              <p>
-                Reset your mind, body, and soul through intentional self-care. This is a space created for restoration—where you can take deep,
-                calming breaths, release stress, and allow your body to naturally relax.
-              </p>
-            </div>
-
-            <div class="featureList">
-              <div class="feature">
-                <div class="feature__icon" aria-hidden="true">✦</div>
-                <div>
-                  <h3>Tailored sessions</h3>
-                  <p>Each visit is built around your goals—stress relief, pain relief, mobility support, or deep relaxation.</p>
-                </div>
-              </div>
-
-              <div class="feature">
-                <div class="feature__icon" aria-hidden="true">✦</div>
-                <div>
-                  <h3>Integrated modalities</h3>
-                  <p>Blending multiple techniques to support balance, healing, and renewal—without a “one-size” formula.</p>
-                </div>
-              </div>
-
-              <div class="feature">
-                <div class="feature__icon" aria-hidden="true">✦</div>
-                <div>
-                  <h3>Mind–body connection</h3>
-                  <p>Support for the nervous system to help release stored tension and stress, and deepen your sense of calm.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <aside class="quoteCard reveal">
-            <p class="quoteCard__kicker">A note on self-care</p>
-            <p class="quoteCard__quote">
-              “At Teshia Massage, self-care is not a luxury—it’s an essential part of your well-being.”
-            </p>
-            <div class="quoteCard__line"></div>
-            <p class="quoteCard__small">
-              Our therapeutic approach supports stress relief, relaxation, and overall body function through a variety of massage modalities.
-              Each session is thoughtfully tailored to meet your individual needs, promoting balance, healing, and renewal in a calm and supportive environment.
-            </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-        <!-- Story -->
-    <section id="story" class="section">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <h2>My Story</h2>
-          <p>
-            My journey to becoming a holistic health practitioner is deeply rooted in family, faith, and lived experience.
-          </p>
-        </div>
-
-        <div class="timeline reveal">
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>Family & Natural Healing</h3>
-              <p>
-                My grandfather strongly believed in natural healing, planting the first seeds of understanding that the body has an incredible ability to restore itself when supported properly.
-                Those beliefs stayed with me and later became the foundation of my life’s work.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>2004 — Three CVAs</h3>
-              <p>
-                In 2004, my life changed dramatically when I experienced three CVAs (strokes) affecting the cerebellum of my brain.
-                This resulted in right-sided weakness, slurred speech, and a blood clot.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>Stepping Away From Medications</h3>
-              <p>
-                Prescription medications often left me feeling nauseous, unbalanced, and unwell—at times causing more discomfort than relief.
-                After much reflection, I chose to pursue a path rooted in natural healing.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>Inspired by Remus Townend</h3>
-              <p>
-                My grandfather, Remus Townend, believed nature provides powerful tools for healing.
-                His curiosity and respect for natural remedies shaped my perspective and strengthened my resolve.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>Holistic Health School</h3>
-              <p>
-                I trained at Healing Hands Holistic Health School in Escondido on Mission Avenue.
-                I chose to quiet fear, clear my mind, and trust the path unfolding before me.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline__item">
-            <div class="timeline__dot"></div>
-            <div class="timeline__content">
-              <h3>Today</h3>
-              <p>
-                Today, I feel clear, grounded, and grateful.
-                My experiences have shaped the compassionate, intentional care I now offer others.
-                Healing can be simple, natural, and deeply connected to the world around us.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="notice reveal">
-          <div class="notice__icon">🕊</div>
-          <div class="notice__content">
-            <h3>Faith-Centered, Compassionate Care</h3>
-            <p>
-              Through intentional, natural therapies, I guide you toward lasting wellness, positivity,
-              and the peace that comes from caring for the body God has blessed you with.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Studio -->
-    <section id="studio" class="section section--alt">
-      <div class="container">
-        <div class="twoCol twoCol--reverse">
-
-          <div class="reveal">
-            <div class="sectionHead sectionHead--tight">
-              <h2>The Studio (Suite 4)</h2>
-              <p>
-                A peaceful, clean, and relaxing space designed to help you unwind the moment you arrive.
-                This is your safe haven.
-              </p>
-            </div>
-
-            <div class="studioGrid">
-              <div class="studioCard">
-                <h3>Atmosphere</h3>
-                <p>Calming, restorative environment for deep exhale moments.</p>
-              </div>
-              <div class="studioCard">
-                <h3>Signature Spa Therapies</h3>
-                <p>Mud wraps, seaweed gel, salt treatments, and glow brushing.</p>
-              </div>
-              <div class="studioCard">
-                <h3>Therapeutic + Spa Blend</h3>
-                <p>Integrated modalities supporting healing, mobility, and relaxation.</p>
-              </div>
-              <div class="studioCard">
-                <h3>Safe Haven</h3>
-                <p>A place to feel grounded, confident, and embraced.</p>
-              </div>
-            </div>
-          </div>
-
-          <aside class="locationCard reveal">
-            <h3>Visit</h3>
-            <p class="muted">Exact address coming soon.</p>
-
-            <div class="infoRow">
-              <span class="infoRow__label">Location</span>
-              <span class="infoRow__value">Escondido, CA • Suite 4</span>
-            </div>
-
-            <div class="infoRow">
-              <span class="infoRow__label">Booking</span>
-              <span class="infoRow__value">By Appointment Only</span>
-            </div>
-
-            <div class="infoRow">
-              <span class="infoRow__label">Focus</span>
-              <span class="infoRow__value">Stress Relief • Renewal • Mobility</span>
-            </div>
-
-            <div class="locationCard__cta">
-              <a class="btn btn--full" href="#contact">Schedule / Contact</a>
-            </div>
-          </aside>
-
-        </div>
-      </div>
-    </section>
-        <!-- FAQ -->
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <h2>FAQ</h2>
-          <p>Answers to help you feel confident before booking.</p>
-        </div>
-
-        <div class="accordion reveal">
-
-          <details class="accItem" open>
-            <summary>
-              What types of techniques are used?
-              <span class="accIcon">+</span>
-            </summary>
-            <div class="accBody">
-              <p>
-                Sessions may include Deep Tissue Techniques, Myofascial Release,
-                Cranial Sacral Therapy, Reflexology, Aromatherapy Integration,
-                Cupping, Stretching, and more — customized for you.
-              </p>
-            </div>
-          </details>
-
-          <details class="accItem">
-            <summary>
-              Is this relaxing or therapeutic?
-              <span class="accIcon">+</span>
-            </summary>
-            <div class="accBody">
-              <p>
-                Both. Sessions blend therapeutic results with a deeply calming experience.
-              </p>
-            </div>
-          </details>
-
-          <details class="accItem">
-            <summary>
-              How do I book?
-              <span class="accIcon">+</span>
-            </summary>
-            <div class="accBody">
-              <p>
-                Use the contact form below. Booking is by appointment only.
-              </p>
-            </div>
-          </details>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section--alt">
-      <div class="container">
-        <div class="sectionHead reveal">
-          <h2>Schedule Your Session</h2>
-          <p>Submit your request below and an email draft will open for sending.</p>
-        </div>
-
-        <div class="formCard reveal">
-          <form id="bookingForm">
-            <div class="row2">
-              <input id="name" type="text" placeholder="Full Name" required>
-              <input id="email" type="email" placeholder="Email" required>
-            </div>
-
-            <input id="phone" type="tel" placeholder="Phone (optional)">
-            <textarea id="message" placeholder="Preferred dates, focus areas, notes"></textarea>
-
-            <button class="btn" type="submit">
-              Send Request →
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container footerGrid">
-        <div>
-          <strong>Teshia Massage</strong><br>
-          Suite 4 • Escondido, CA • By Appointment Only
-        </div>
-        <div>
-          © <span id="year"></span> Teshia Massage
-        </div>
-      </div>
-    </footer>
-  </main>
-  
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const BUSINESS_EMAIL = "3dudes1life@gmail.com";
-
-    const form = document.getElementById('bookingForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
-
-      const subject = encodeURIComponent("Appointment Request — Teshia Massage");
-      const body = encodeURIComponent(
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Phone: " + phone + "\n\n" +
-        "Details:\n" + message
-      );
-
-      window.location.href = "mailto:" + 3dudes1life@gmail.com + "?subject=" + subject + "&body=" + body;
-    });
-  </script>
+</script>
 
 </body>
 </html>

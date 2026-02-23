@@ -45,7 +45,76 @@ body{
   max-width:var(--max);
   margin:auto;
 }
+/* ===========================
+   STUDIO GRID
+=========================== */
 
+.studio-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.studio-card{
+  padding:35px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  transition:.3s;
+}
+
+.studio-card:hover{
+  border-color:var(--gold);
+  background:var(--goldSoft);
+}
+
+.studio-card h3{
+  margin-top:0;
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.studio-card p{
+  color:var(--muted);
+}
+
+/* ===========================
+   LOCATION
+=========================== */
+
+.location-card{
+  max-width:750px;
+  margin:60px auto 0;
+  padding:50px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  text-align:center;
+}
+
+.location-details{
+  color:var(--muted);
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
+
+.location-details strong{
+  color:var(--text);
+}
+
+@media(max-width:900px){
+
+  .studio-grid{
+    grid-template-columns:1fr;
+  }
+
+  .location-card{
+    padding:35px;
+  }
+
+}
 /* ===========================
    HEADER
 =========================== */
@@ -612,6 +681,100 @@ function toggleMenu(){
             Today, I feel grounded and grateful. My experiences shaped the compassionate, intentional care I now offer. I honor my ancestors and the natural healing traditions that continue to guide my practice.
           </p>
         </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===========================
+     STUDIO EXPERIENCE
+=========================== -->
+
+<section id="studio" style="padding:120px 0; border-top:1px solid var(--line);">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      The Studio Experience
+    </h2>
+
+    <p class="section-intro">
+      Designed to be peaceful, clean, and restorative the moment you arrive.
+    </p>
+
+    <div class="studio-grid">
+
+      <div class="studio-card">
+        <h3>Calming Atmosphere</h3>
+        <p>
+          Soft lighting, soothing tones, and a tranquil environment help you disconnect from stress and reconnect with yourself.
+        </p>
+      </div>
+
+      <div class="studio-card">
+        <h3>Private & Intentional</h3>
+        <p>
+          A quiet Suite 4 location designed for comfort, privacy, and focused care without distractions.
+        </p>
+      </div>
+
+      <div class="studio-card">
+        <h3>Clean & Professional</h3>
+        <p>
+          Every detail is curated to maintain a clean, welcoming, and professional environment.
+        </p>
+      </div>
+
+      <div class="studio-card">
+        <h3>Customized Wellness</h3>
+        <p>
+          Sessions are structured to meet your body where it is and guide you toward balance.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ===========================
+     LOCATION
+=========================== -->
+
+<section id="location" style="padding:120px 0; border-top:1px solid var(--line);">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Location
+    </h2>
+
+    <p class="section-intro">
+      Suite 4 • Escondido, California
+    </p>
+
+    <div class="location-card">
+
+      <h3 style="font-family:'Playfair Display',serif; margin-top:0;">
+        By Appointment Only
+      </h3>
+
+      <p style="color:var(--muted); margin-bottom:25px;">
+        Located in Escondido, CA. Exact address provided upon booking confirmation.
+      </p>
+
+      <div class="location-details">
+        <p><strong>Area Served:</strong> Escondido & Surrounding Areas</p>
+        <p><strong>Setting:</strong> Private Wellness Studio</p>
+      </div>
+
+      <div style="margin-top:40px;">
+        <a href="#contact" class="btn">Schedule a Session</a>
       </div>
 
     </div>

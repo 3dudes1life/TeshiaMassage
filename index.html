@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Teshia Massage offers holistic bodywork and deep tissue therapy in Escondido, CA. Customized sessions for stress relief, mobility, and restorative wellness." />
+  <meta name="theme-color" content="#0f2c2a" />
+  <title>Teshia Massage | Holistic Bodywork & Deep Tissue Therapy | Escondido, CA</title>
+
+  <!-- Social share -->
+  <meta property="og:title" content="Teshia Massage | Escondido, CA" />
+  <meta property="og:description" content="Reset your mind, body, and soul through intentional self-care. Holistic bodywork and deep tissue therapy in a calm, restorative studio." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300,400,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #f7f4ef;
+      --surface: rgba(255,255,255,0.78);
+      --surface2: rgba(255,255,255,0.62);
+      --ink: #10201f;
+      --muted: rgba(16,32,31,0.72);
+      --soft: rgba(16,32,31,0.08);
+      --brand: #0f2c2a; /* deep teal */
+      --brand2:#2f6d67; /* eucalyptus */
+      --accent:#d7b27d; /* warm sand */
+      --line: rgba(16,32,31,0.12);
+      --shadow: 0 18px 45px rgba(0,0,0,0.08);
+      --radius: 22px;
+      --radius2: 28px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--ink);
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(47,109,103,0.14), transparent 55%),
+                  radial-gradient(900px 600px at 90% 15%, rgba(215,178,125,0.18), transparent 55%),
+                  radial-gradient(900px 600px at 50% 100%, rgba(47,109,103,0.10), transparent 55%),
+                  var(--bg);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 22px; }
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(247,244,239,0.78), rgba(247,244,239,0.62));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding: 14px 0;
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+
+    .mark{
+      width:44px; height:44px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(15,44,42,1), rgba(47,109,103,1));
+      display:grid; place-items:center;
+      box-shadow: 0 10px 26px rgba(15,44,42,0.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .mark::after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 90deg, rgba(215,178,125,0.0), rgba(215,178,125,0.35), rgba(215,178,125,0.0));
+      animation: spin 7s linear infinite;
+      opacity:.75;
+    }
+    .mark span{
+      position:relative;
+      font-family: Fraunces, serif;
+      font-weight:600; font-size:18px;
+      color: rgba(255,255,255,0.95);
+      letter-spacing: 0.5px;
+    }
+    @keyframes spin{ to { transform: rotate(360deg); } }
+
+    .brand h1{
+      margin:0; font-size: 14px; letter-spacing:0.16em; text-transform:uppercase;
+      font-weight:600;
+    }
+    .brand p{
+      margin:0; font-size: 12px; color: var(--muted);
+    }
+
+    .links{
+      display:flex; align-items:center; gap: 14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .links a{
+      font-size: 13px;
+      color: var(--muted);
+      padding: 10px 10px;
+      border-radius: 12px;
+      transition: 180ms ease;
+    }
+    .links a:hover{ background: rgba(255,255,255,0.55); color: var(--ink); }
+
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      border-radius: 999px;
+      padding: 11px 14px;
+      font-size: 13px;
+      font-weight:600;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.55);
+      transition: transform 150ms ease, background 150ms ease, box-shadow 150ms ease;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.75); box-shadow: 0 14px 30px rgba(0,0,0,0.08); }
+    .btn.primary{
+      border-color: rgba(15,44,42,0.14);
+      background: linear-gradient(135deg, rgba(15,44,42,1), rgba(47,109,103,1));
+      color: rgba(255,255,255,0.96);
+      box-shadow: 0 16px 38px rgba(15,44,42,0.22);
+    }
+    .btn.primary:hover{ transform: translateY(-1px); box-shadow: 0 20px 50px rgba(15,44,42,0.26); }
+
+    .hero{
+      padding: 56px 0 26px;
+      position:relative;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+
+    .card{
+      border-radius: var(--radius2);
+      background: var(--surface);
+      border: 1px solid rgba(16,32,31,0.10);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .heroMain{
+      padding: 34px 30px;
+      position:relative;
+      isolation:isolate;
+    }
+
+    .heroMain::before{
+      content:"";
+      position:absolute; inset:-120px -160px auto auto;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle at 30% 30%, rgba(215,178,125,0.35), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(47,109,103,0.28), transparent 55%);
+      filter: blur(2px);
+      z-index:-1;
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 8px 12px;
+      background: rgba(15,44,42,0.06);
+      border: 1px solid rgba(15,44,42,0.10);
+      border-radius: 999px;
+      font-size: 12px;
+      color: rgba(15,44,42,0.86);
+      font-weight:600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .headline{
+      margin: 16px 0 10px;
+      font-family: Fraunces, serif;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.06;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .subhead{
+      margin: 0 0 22px;
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .heroActions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin: 14px 0 18px;
+    }
+
+    .miniGrid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini{
+      padding: 14px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(16,32,31,0.10);
+      background: rgba(255,255,255,0.55);
+    }
+
+    .mini h3{
+      margin:0 0 6px;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: rgba(15,44,42,0.86);
+    }
+    .mini p{ margin:0; font-size: 13px; color: var(--muted); }
+
+    .heroSide{
+      padding: 22px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+    .sideBlock{
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(16,32,31,0.10);
+      background: rgba(255,255,255,0.55);
+    }
+    .sideBlock h3{
+      margin: 0 0 8px;
+      font-family: Fraunces, serif;
+      font-size: 18px;
+      letter-spacing:-0.01em;
+    }
+    .sideBlock p{
+      margin:0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .fine{
+      font-size: 12px;
+      color: rgba(16,32,31,0.62);
+    }
+
+    section{ padding: 34px 0; }
+    .sectionTitle{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-family: Fraunces, serif;
+      font-size: 30px;
+      letter-spacing: -0.01em;
+    }
+    .sectionTitle p{
+      margin:0;
+      color: var(--muted);
+      max-width: 62ch;
+      font-size: 14px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .contentCard{
+      padding: 22px 22px;
+    }
+
+    .contentCard h3{
+      margin:0 0 10px;
+      font-family: Fraunces, serif;
+      font-size: 20px;
+    }
+
+    .contentCard p{
+      margin:0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contentCard p:last-child{ margin-bottom:0; }
+
+    .pillList{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 14px;
+    }
+    .pill{
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(16,32,31,0.10);
+      background: rgba(255,255,255,0.55);
+      color: rgba(16,32,31,0.82);
+    }
+
+    .modalities{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .mod{
+      padding: 14px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(16,32,31,0.10);
+      min-height: 96px;
+    }
+    .mod strong{
+      display:block;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .mod span{
+      display:block;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .ctaBand{
+      border-radius: var(--radius2);
+      background: linear-gradient(135deg, rgba(15,44,42,1), rgba(47,109,103,1));
+      color: rgba(255,255,255,0.96);
+      padding: 26px 22px;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 22px 60px rgba(15,44,42,0.22);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      overflow:hidden;
+      position:relative;
+    }
+    .ctaBand::after{
+      content:"";
+      position:absolute; inset:-80px -140px auto auto;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle at 30% 30%, rgba(215,178,125,0.38), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(255,255,255,0.14), transparent 55%);
+      opacity:.9;
+    }
+    .ctaBand h3{
+      margin:0 0 6px;
+      font-family: Fraunces, serif;
+      font-size: 22px;
+      position:relative;
+    }
+    .ctaBand p{
+      margin:0;
+      opacity:0.88;
+      font-size: 14px;
+      position:relative;
+    }
+    .ctaBand .ctaRight{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      position:relative;
+    }
+    .btn.light{
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.96);
+    }
+    .btn.light:hover{
+      background: rgba(255,255,255,0.22);
+      box-shadow: 0 16px 44px rgba(0,0,0,0.16);
+    }
+
+    footer{
+      padding: 26px 0 40px;
+      color: rgba(16,32,31,0.66);
+      font-size: 13px;
+    }
+    .footGrid{
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .reveal{
+      opacity:0;
+      transform: translateY(12px);
+      transition: 600ms ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .links{ display:none; }
+      .brand{ min-width:auto; }
+      .miniGrid{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .modalities{ grid-template-columns: 1fr; }
+      .ctaBand{ flex-direction:column; align-items:flex-start; }
+      .ctaBand .ctaRight{ justify-content:flex-start; }
+    }
+
+    /* Accessibility helper */
+    .skip{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip:focus{
+      left: 16px; top: 16px; width:auto; height:auto;
+      background: #fff; color: #000;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      z-index: 999;
+    }
+  </style>
+
+  <!-- LocalBusiness schema (edit phone/address later) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Teshia Massage",
+    "description":"Holistic bodywork and deep tissue therapy in Escondido, CA. Customized sessions supporting stress relief, mobility, and restorative wellness.",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Escondido",
+      "addressRegion":"CA",
+      "addressCountry":"US"
+    },
+    "areaServed":"Escondido, CA"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="#">
+          <div class="mark" aria-hidden="true"><span>TM</span></div>
+          <div>
+            <h1>Teshia Massage</h1>
+            <p>Holistic Bodywork • Escondido, CA</p>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#modalities">Modalities</a>
+          <a href="#studio">Studio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <!-- Replace # with real links when you have them -->
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn primary" href="#contact">Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="card heroMain reveal">
+            <div class="kicker">Intentional self-care • restorative wellness</div>
+            <h2 class="headline">Restore your body.<br/>Renew your mind.<br/>Reconnect your spirit.</h2>
+            <p class="subhead">
+              Reset your mind, body, and soul through intentional self-care in Escondido. Teshia Massage offers a peaceful,
+              clean, relaxing studio designed to help you unwind the moment you arrive — with customized bodywork that supports
+              stress relief, relaxation, mobility, and overall well-being.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Schedule / Request an Appointment</a>
+              <a class="btn" href="#services">Explore Services</a>
+            </div>
+
+            <div class="miniGrid">
+              <div class="mini">
+                <h3>Customized</h3>
+                <p>Sessions tailored to your body, goals, and needs — every time.</p>
+              </div>
+              <div class="mini">
+                <h3>Therapeutic</h3>
+                <p>Deep tissue + functional work to support mobility and relief.</p>
+              </div>
+              <div class="mini">
+                <h3>Restorative</h3>
+                <p>Calm, supportive environment for nervous system reset.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card heroSide reveal" aria-label="Quick info">
+            <div class="sideBlock">
+              <h3>What to expect</h3>
+              <p>
+                A grounded, calming experience — designed for restoration.
+                You’ll have space to breathe, release stress, and allow your body to relax naturally.
+              </p>
+              <div class="fine">Self-care is not a luxury — it’s essential.</div>
+            </div>
+
+            <div class="sideBlock">
+              <h3>Signature add-ons</h3>
+              <p>
+                Mineral-rich mud wraps, nourishing seaweed gel applications, salt treatments, and glow brushing — curated to
+                promote circulation and skin renewal.
+              </p>
+              <div class="fine">Ask about availability when booking.</div>
+            </div>
+
+            <div class="sideBlock">
+              <h3>Location</h3>
+              <p>
+                Suite 4 • Escondido, CA<br/>
+                <span class="fine">(Add exact address + hours when you have them.)</span>
+              </p>
+              <a class="btn" href="#contact" style="margin-top:8px; display:inline-flex;">Contact to Book</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionTitle reveal">
+          <h2>About the practice</h2>
+          <p>
+            A therapeutic approach that blends multiple modalities to support the body’s natural healing process — grounded in
+            repeated, intentional self-care.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card contentCard reveal">
+            <h3>Mission</h3>
+            <p>
+              Teshia is a holistic health practitioner and deep tissue specialist who blends multiple therapeutic modalities to
+              support the body’s natural healing process.
+            </p>
+            <p>
+              The mission is to encourage repeated, intentional self-care that nurtures physical, emotional, and overall wellness
+              through customized bodywork — in a calm, supportive environment.
+            </p>
+
+            <div class="pillList" aria-label="Core values">
+              <div class="pill">Personalized care</div>
+              <div class="pill">Purposeful touch</div>
+              <div class="pill">Stress relief</div>
+              <div class="pill">Mobility support</div>
+              <div class="pill">Rest & renewal</div>
+            </div>
+          </div>
+
+          <div class="card contentCard reveal">
+            <h3>Story & calling</h3>
+            <p>
+              This work is rooted in family, faith, and lived experience. In 2004, Teshia experienced three CVAs (strokes) affecting
+              the cerebellum, resulting in right-sided weakness, slurred speech, and a blood clot on the cerebellum.
+            </p>
+            <p>
+              After struggling with medication side effects, she chose to pursue a path of natural healing — inspired by her grandfather,
+              Remus Townend, who believed the body can restore itself when supported properly and guided by nature’s tools.
+            </p>
+            <p>
+              Today, that journey shapes the compassionate, intentional care offered to clients seeking balance, healing, and renewal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sectionTitle reveal">
+          <h2>Services</h2>
+          <p>Therapeutic sessions and restorative spa therapies designed to support healing, mobility, detoxification, and deep relaxation.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card contentCard reveal">
+            <h3>Therapeutic bodywork</h3>
+            <p>
+              A variety of massage approaches to support stress relief, relaxation, and overall body function —
+              thoughtfully tailored to your individual needs.
+            </p>
+            <div class="pillList">
+              <div class="pill">Deep Tissue Techniques</div>
+              <div class="pill">Swedish & Therapeutic Massage</div>
+              <div class="pill">Myofascial Release</div>
+              <div class="pill">Therapeutic Stretching</div>
+              <div class="pill">Passive Joint Movement</div>
+              <div class="pill">Cranial Sacral Therapy</div>
+              <div class="pill">Somatic Bodywork</div>
+            </div>
+          </div>
+
+          <div class="card contentCard reveal">
+            <h3>Signature spa therapies</h3>
+            <p>
+              Indulge in mineral-rich and nourishing applications curated to promote circulation, rejuvenate the skin,
+              and leave you feeling radiant and renewed.
+            </p>
+            <div class="pillList">
+              <div class="pill">Mineral-rich Mud Wraps</div>
+              <div class="pill">Seaweed Gel Applications</div>
+              <div class="pill">Salt Treatments</div>
+              <div class="pill">Glow Brushing</div>
+              <div class="pill">Aromatherapy Integration</div>
+              <div class="pill">Reflexology</div>
+              <div class="pill">Traditional Dynamic Cupping</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap" style="padding:18px 0 0;">
+          <div class="ctaBand reveal">
+            <div>
+              <h3>Ready for a full reset?</h3>
+              <p>Schedule your customized session and experience true restorative wellness.</p>
+            </div>
+            <div class="ctaRight">
+              <a class="btn light" href="#contact">Contact</a>
+              <a class="btn light" href="#contact">Book a Session</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALITIES -->
+    <section id="modalities">
+      <div class="wrap">
+        <div class="sectionTitle reveal">
+          <h2>Integrated modalities</h2>
+          <p>Each session can blend techniques based on your goals — pain relief, flexibility, nervous system calm, and deeper recovery.</p>
+        </div>
+
+        <div class="card contentCard reveal">
+          <div class="modalities">
+            <div class="mod">
+              <strong>Passive Joint Movement</strong>
+              <span>Gentle joint mobilization to reduce stiffness and support range of motion.</span>
+            </div>
+            <div class="mod">
+              <strong>Therapeutic Stretching</strong>
+              <span>Customized stretches to lengthen tight muscles and improve flexibility.</span>
+            </div>
+            <div class="mod">
+              <strong>Cranial Sacral Therapy</strong>
+              <span>Light-touch work to calm the nervous system and restore balance.</span>
+            </div>
+            <div class="mod">
+              <strong>Myofascial Release</strong>
+              <span>Sustained pressure to release deep restrictions and support alignment.</span>
+            </div>
+            <div class="mod">
+              <strong>Somatic Bodywork</strong>
+              <span>Mind-body techniques that support release of stored tension and stress.</span>
+            </div>
+            <div class="mod">
+              <strong>Traditional Dynamic Cupping</strong>
+              <span>Supports circulation, eases tension, and encourages detoxification.</span>
+            </div>
+            <div class="mod">
+              <strong>Swedish & Therapeutic Massage</strong>
+              <span>Flowing techniques for relaxation, circulation, and everyday tension relief.</span>
+            </div>
+            <div class="mod">
+              <strong>Deep Tissue Techniques</strong>
+              <span>Focused work for chronic pain, imbalances, and restricted movement.</span>
+            </div>
+            <div class="mod">
+              <strong>Reflexology + Aromatherapy</strong>
+              <span>Targeted pressure + essential oils to enhance mood, relaxation, and wellness.</span>
+            </div>
+          </div>
+          <p style="margin-top:14px;">
+            <strong>🌿 Personalized care. Purposeful touch. Lasting results.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO -->
+    <section id="studio">
+      <div class="wrap">
+        <div class="sectionTitle reveal">
+          <h2>The studio experience</h2>
+          <p>A peaceful, clean, relaxing space created for restoration — where you can breathe deeper, release stress, and unwind.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card contentCard reveal">
+            <h3>A safe haven for restoration</h3>
+            <p>
+              At Suite 4, every experience is designed to restore your body, mind, and spirit. This is more than self-care —
+              it is a journey toward grounded confidence, positivity, and peace.
+            </p>
+            <p>
+              Through intentional, natural therapies, clients are supported in releasing tension, detoxifying, and reconnecting with inner balance.
+            </p>
+          </div>
+
+          <div class="card contentCard reveal">
+            <h3>Faith-centered, welcoming care</h3>
+            <p>
+              The approach is holistic and heart-led — honoring the body and the breath, and creating space for calm.
+              Clients are welcomed as they are, and sessions are crafted with compassion and discretion.
+            </p>
+            <p class="fine">
+              (If you want, we can add a gentle note about inclusivity and professional boundaries.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionTitle reveal">
+          <h2>Contact & booking</h2>
+          <p>Replace the placeholders below when you get her phone number, email, address, and booking link.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card contentCard reveal">
+            <h3>Request an appointment</h3>
+            <p>
+              For now, this site can direct clients to call/text/email to book — or we can add an online booking link (Square, Vagaro, MassageBook, Calendly, etc.).
+            </p>
+
+            <div class="pillList" style="margin-top:12px;">
+              <div class="pill">📍 Suite 4 • Escondido, CA</div>
+              <div class="pill">🕒 Hours: (Add)</div>
+              <div class="pill">📞 Phone: (Add)</div>
+              <div class="pill">✉️ Email: (Add)</div>
+            </div>
+
+            <div class="heroActions" style="margin-top:16px;">
+              <a class="btn primary" href="#" onclick="return openPlaceholder('booking');">Book Online (Add Link)</a>
+              <a class="btn" href="#" onclick="return openPlaceholder('contact');">Call/Text (Add Info)</a>
+            </div>
+
+            <p class="fine" style="margin-top:10px;">
+              Tip: If she doesn’t have booking software yet, I’d recommend **Square Appointments** or **Vagaro** for a polished client experience.
+            </p>
+          </div>
+
+          <div class="card contentCard reveal">
+            <h3>Professional note</h3>
+            <p>
+              Sessions are customized to your needs and comfort. If you have specific concerns, mobility limitations, or areas you’d like to focus on,
+              mention them when scheduling so your session can be tailored appropriately.
+            </p>
+            <p class="fine">
+              This website content is for general wellness and relaxation. It does not replace medical advice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footGrid">
+          <div>
+            <strong>Teshia Massage</strong><br/>
+            <span class="fine">Holistic Bodywork • Escondido, California</span>
+          </div>
+          <div class="fine">
+            © <span id="year"></span> Teshia Massage • All rights reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Reveal on scroll (subtle premium animation)
+    const els = Array.from(document.querySelectorAll('.reveal'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Placeholder helpers until real booking/contact links exist
+    function openPlaceholder(which){
+      const msg = which === 'booking'
+        ? "Booking link not added yet. Add her booking URL to the button’s href."
+        : "Contact info not added yet. Add phone/email details in the Contact section.";
+      alert(msg);
+      return false;
+    }
+  </script>
+</body>
+</html>

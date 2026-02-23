@@ -190,7 +190,67 @@ nav a:hover{
   display:flex;
   gap:20px;
 }
+/* ===========================
+   THERAPEUTIC APPROACH
+=========================== */
 
+.section-title{
+  font-family:"Playfair Display",serif;
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.section-intro{
+  max-width:800px;
+  color:var(--muted);
+  margin-bottom:60px;
+}
+
+.approach-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  margin-bottom:60px;
+}
+
+.approach-item{
+  padding:30px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+}
+
+.approach-item h3{
+  margin-top:0;
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.approach-item p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.approach-item.highlight{
+  border-color:var(--gold);
+  background:var(--goldSoft);
+}
+
+.approach-expanded{
+  max-width:900px;
+}
+
+.approach-expanded p{
+  color:var(--muted);
+  margin-bottom:24px;
+}
+
+@media(max-width:900px){
+  .approach-grid{
+    grid-template-columns:1fr;
+  }
+}
 /* ===========================
    RESPONSIVE
 =========================== */
@@ -339,6 +399,73 @@ function toggleMenu(){
           <span>Wellness</span>
         </div>
       </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===========================
+     THERAPEUTIC APPROACH
+=========================== -->
+
+<section id="approach" style="padding:120px 0; border-top:1px solid var(--line);">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Our Therapeutic Approach
+    </h2>
+
+    <p class="section-intro">
+      Our therapeutic approach supports stress relief, relaxation, and overall body function through a variety of massage modalities. Each session is thoughtfully tailored to meet your individual needs, promoting balance, healing, and renewal in a calm and supportive environment.
+    </p>
+
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <h3>Tailored Sessions</h3>
+        <p>
+          Each visit is built around your goals—stress relief, pain relief, mobility support, or deep relaxation.
+        </p>
+      </div>
+
+      <div class="approach-item">
+        <h3>Integrated Modalities</h3>
+        <p>
+          Blending multiple techniques to support balance, healing, and renewal—never one-size-fits-all.
+        </p>
+      </div>
+
+      <div class="approach-item">
+        <h3>Mind–Body Connection</h3>
+        <p>
+          Support for the nervous system to help release stored tension and deepen your sense of calm.
+        </p>
+      </div>
+
+      <div class="approach-item highlight">
+        <h3>Self-Care Is Essential</h3>
+        <p>
+          At Teshia Massage, self-care is not a luxury—it’s an essential part of your well-being.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="approach-expanded">
+
+      <p>
+        At Suite 4, every experience is designed to restore your body, mind, and spirit. As a licensed massage therapist, I blend deep tissue therapy with holistic, faith-centered treatments to help you release tension, detoxify, and reconnect with your inner balance.
+      </p>
+
+      <p>
+        Indulge in signature spa therapies including mineral-rich mud wraps, nourishing seaweed gel applications, salt treatments, and glow brushing—all curated to promote circulation, rejuvenate your skin, and leave you feeling radiant and renewed.
+      </p>
+
+      <p>
+        This is more than self-care; it is a journey. Suite 4 is your safe haven—a place to feel grounded, confident, and embraced. Through intentional, natural therapies, I guide you toward lasting wellness, positivity, and the peace that comes from caring for the body God has blessed you with.
+      </p>
 
     </div>
 

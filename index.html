@@ -842,27 +842,19 @@ function toggleMenu(){
     <h2 class="section-title">Schedule Your Session</h2>
 
     <p class="section-intro">
-      Reset your mind, body, and soul through intentional self-care. Appointments are by request.
+      Appointments are by request. Click below to send an email and begin your booking.
     </p>
 
-    <div class="contact-wrapper">
+    <div style="text-align:center; margin-top:40px;">
 
-      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+      <a 
+        class="btn"
+        href="mailto:teshiamassage@gmail.com?subject=Appointment%20Request%20-%20Teshia%20Massage&body=Hello%20Teshia,%0D%0A%0D%0AMy%20name%20is:%0D%0A%0D%0APhone%20Number:%0D%0A%0D%0AI%20am%20interested%20in:%0D%0A%0D%0APreferred%20days/times:%0D%0A%0D%0AThank%20you."
+      >
+        Email to Request Appointment
+      </a>
 
-        <div class="form-row">
-          <input type="text" name="Name" placeholder="Full Name" required>
-          <input type="email" name="Email" placeholder="Email Address" required>
-        </div>
-
-        <input type="text" name="Phone" placeholder="Phone Number (Optional)">
-
-        <textarea name="Message" placeholder="Tell me about your goals or what you're experiencing..." required></textarea>
-
-        <button type="submit" class="btn">Request Appointment</button>
-
-      </form>
-
-      <p style="margin-top:25px; color:var(--muted); text-align:center;">
+      <p style="margin-top:25px; color:var(--muted);">
         You will receive a response within 24–48 hours.
       </p>
 

@@ -590,6 +590,20 @@
       padding: 18px;
       position:relative;
       overflow:hidden;
+     
+  @media (max-width: 900px){
+
+  .cardsGrid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card{
+    grid-column: span 1;
+    padding: 20px;
+  }
+
+}
     }
     .card h3{
       margin: 2px 0 6px;

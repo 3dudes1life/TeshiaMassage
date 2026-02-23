@@ -3,358 +3,259 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="description" content="Teshia Massage offers holistic bodywork and deep tissue therapy in Escondido, CA. Customized sessions for stress relief, mobility, and restorative wellness." />
+<meta name="description" content="Teshia Massage offers holistic bodywork and deep tissue therapy in Escondido, CA. Customized sessions supporting stress relief, mobility, and restorative wellness." />
 <meta name="theme-color" content="#0f1413" />
-<title>Teshia Massage | Private Holistic Bodywork | Escondido, CA</title>
+<title>Teshia Massage | Holistic Bodywork & Deep Tissue Therapy | Escondido, CA</title>
 
 <meta property="og:title" content="Teshia Massage | Escondido, CA" />
-<meta property="og:description" content="Private holistic bodywork and restorative wellness studio in Escondido, CA." />
+<meta property="og:description" content="Reset your mind, body, and soul through intentional self-care. Boutique holistic bodywork studio in Escondido, California." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --bg:#0f1413;
-  --surface:rgba(27,34,32,0.85);
-  --surface2:rgba(32,40,38,0.75);
+  --panel:#1b2220;
+  --panel-soft:#202826;
   --ink:#ece8e1;
   --muted:#a7a39b;
-  --soft:rgba(255,255,255,0.06);
-  --brand:#1b2220;
-  --brand2:#2a3431;
   --accent:#c2a56b;
   --line:rgba(255,255,255,0.08);
-  --shadow:0 20px 60px rgba(0,0,0,0.35);
-  --radius:24px;
-  --radius2:30px;
-  --max:1120px;
+  --radius:28px;
+  --max:1100px;
 }
-
 *{box-sizing:border-box}
 body{
   margin:0;
+  background:linear-gradient(to bottom,#0f1413,#121917);
   color:var(--ink);
-  background:linear-gradient(to bottom,#0f1413,#111716);
   font-family:Inter,system-ui;
-  line-height:1.6;
+  line-height:1.7;
 }
-
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
 
-.topbar{
+/* Header */
+header{
   position:sticky;top:0;z-index:50;
-  background:rgba(15,20,19,0.96);
+  background:rgba(15,20,19,.95);
   border-bottom:1px solid var(--line);
 }
-
 .nav{
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;justify-content:space-between;align-items:center;
   padding:18px 0;
 }
-
 .brand{
-  display:flex;align-items:center;gap:14px;
-}
-
-.mark{
-  width:44px;height:44px;border-radius:14px;
-  background:linear-gradient(135deg,#1b2220,#2a3431);
-  display:grid;place-items:center;
-  border:1px solid var(--line);
-}
-
-.mark span{
   font-family:"Cormorant Garamond",serif;
-  font-size:18px;color:var(--accent);
+  font-size:18px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
 }
-
-.brand h1{
-  margin:0;font-size:14px;letter-spacing:.16em;text-transform:uppercase;
-}
-
-.brand p{margin:0;font-size:12px;color:var(--muted)}
-
-.links{
-  display:flex;gap:26px;font-size:13px;color:var(--muted)
-}
+.links{display:flex;gap:26px;font-size:13px;color:var(--muted)}
 .links a:hover{color:var(--ink)}
-
 .btn{
+  padding:12px 20px;
   border-radius:999px;
-  padding:12px 18px;
-  font-size:13px;
   border:1px solid var(--accent);
   color:var(--accent);
-  transition:.25s ease;
+  font-size:13px;
+  transition:.25s;
 }
 .btn:hover{background:var(--accent);color:#111}
 
-.hero{padding:80px 0 40px}
-.heroGrid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:28px;
-}
-
-.card{
-  background:var(--surface);
-  border-radius:var(--radius2);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
-}
-
-.heroMain{padding:40px}
-
-.headline{
+/* Hero */
+.hero{padding:100px 0 70px;text-align:left}
+.hero h1{
   font-family:"Cormorant Garamond",serif;
-  font-size:clamp(40px,5vw,64px);
+  font-size:clamp(42px,6vw,70px);
   line-height:1.05;
-  margin:0 0 20px;
+  margin-bottom:20px;
+}
+.hero p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:30px;
 }
 
-.subhead{color:var(--muted);margin-bottom:30px}
-
-.heroActions{display:flex;gap:14px;flex-wrap:wrap}
-
-.miniGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:24px;
+/* Sections */
+section{
+  padding:80px 0;
+  border-top:1px solid var(--line);
 }
-
-.mini{
-  background:var(--surface2);
-  padding:16px;
-  border-radius:18px;
-  border:1px solid var(--line);
-}
-
-.mini h3{
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:6px;
-}
-.mini p{margin:0;color:var(--muted);font-size:13px}
-
-section{padding:60px 0;border-top:1px solid var(--line)}
-
-.sectionTitle h2{
+h2{
   font-family:"Cormorant Garamond",serif;
-  font-size:36px;margin-bottom:10px;
+  font-size:42px;
+  margin-bottom:20px;
 }
-.sectionTitle p{color:var(--muted)}
-
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-
-.contentCard{
-  padding:28px;
-  background:var(--surface);
+.lead{
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:30px;
+}
+.card{
+  background:var(--panel);
+  padding:36px;
   border-radius:var(--radius);
   border:1px solid var(--line);
 }
-
-.pillList{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.pill{
-  font-size:13px;padding:8px 14px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background:var(--surface2);
-}
-
-.modalities{
+.grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
 }
-
+.mod-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
 .mod{
-  background:var(--surface2);
-  padding:16px;border-radius:18px;
+  background:var(--panel-soft);
+  padding:18px;
+  border-radius:18px;
   border:1px solid var(--line);
 }
-
-.ctaBand{
-  margin-top:30px;
-  background:linear-gradient(135deg,#1b2220,#2a3431);
-  padding:30px;
-  border-radius:var(--radius2);
-  border:1px solid var(--accent);
-  display:flex;justify-content:space-between;align-items:center;
+.mod strong{
+  display:block;
+  font-size:15px;
+  margin-bottom:6px;
 }
-
 footer{
-  padding:40px 0;
+  padding:50px 0;
   border-top:1px solid var(--line);
   color:var(--muted);
   font-size:13px;
 }
-
 @media(max-width:980px){
-  .heroGrid,.grid2,.modalities{grid-template-columns:1fr}
+  .grid,.mod-list{grid-template-columns:1fr}
   .links{display:none}
-  .miniGrid{grid-template-columns:1fr}
-  .ctaBand{flex-direction:column;align-items:flex-start;gap:16px}
 }
 </style>
 </head>
 
 <body>
 
-<header class="topbar">
-<div class="wrap nav">
-<div class="brand">
-<div class="mark"><span>TM</span></div>
-<div>
-<h1>Teshia Massage</h1>
-<p>Holistic Bodywork • Escondido, CA</p>
-</div>
-</div>
-
-<nav class="links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#modalities">Modalities</a>
-<a href="#studio">Studio</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<a class="btn" href="#contact">Book a Session</a>
-</div>
+<header>
+  <div class="wrap nav">
+    <div class="brand">Teshia Massage</div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#services">Services</a>
+      <a href="#modalities">Modalities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Book a Session</a>
+  </div>
 </header>
 
 <main>
 
-<!-- HERO -->
 <section class="hero">
-<div class="wrap">
-<div class="heroGrid">
-<div class="card heroMain">
-<h2 class="headline">Restore your body.<br>Renew your mind.<br>Reconnect your spirit.</h2>
-<p class="subhead">
-Reset your mind, body, and soul through intentional self-care in Escondido. A peaceful, restorative studio offering customized therapeutic bodywork.
-</p>
-<div class="heroActions">
-<a class="btn" href="#contact">Schedule Appointment</a>
-<a class="btn" href="#services">Explore Services</a>
-</div>
-<div class="miniGrid">
-<div class="mini">
-<h3>Customized</h3>
-<p>Every session tailored to your goals.</p>
-</div>
-<div class="mini">
-<h3>Therapeutic</h3>
-<p>Deep tissue & functional mobility work.</p>
-</div>
-<div class="mini">
-<h3>Restorative</h3>
-<p>Designed for nervous system calm.</p>
-</div>
-</div>
-</div>
-
-<div class="card heroMain">
-<h3 style="font-family:Cormorant Garamond,serif;font-size:22px;">Suite 4 • Escondido</h3>
-<p class="subhead">
-Private sessions in a calm, welcoming environment focused on healing, balance, and renewal.
-</p>
-<a class="btn" href="#contact">Contact to Book</a>
-</div>
-</div>
-</div>
+  <div class="wrap">
+    <h1>Restore the body.<br>Renew the mind.<br>Reconnect the spirit.</h1>
+    <p>
+      I am a holistic health practitioner and deep tissue specialist who blends multiple therapeutic modalities to support the body’s natural healing process. My mission is to encourage repeated, intentional self-care that nurtures physical, emotional, and overall wellness through customized bodywork.
+    </p>
+    <a class="btn" href="#contact">Schedule Your Session</a>
+  </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
-<div class="wrap">
-<div class="sectionTitle">
-<h2>About the Practice</h2>
-<p>Rooted in faith, lived experience, and holistic healing.</p>
-</div>
-<div class="grid2">
-<div class="contentCard">
-<h3>Mission</h3>
-<p>Encouraging repeated, intentional self-care through personalized therapeutic bodywork that nurtures physical and emotional wellness.</p>
-</div>
-<div class="contentCard">
-<h3>Story</h3>
-<p>After experiencing three CVAs in 2004, Teshia chose a path of natural healing inspired by her grandfather’s belief in the body’s innate ability to restore itself.</p>
-</div>
-</div>
-</div>
+  <div class="wrap">
+    <h2>The Studio</h2>
+    <p class="lead">
+      Reset your mind, body, and soul through intentional self-care here in Escondido. Teshia Massage offers a peaceful, clean, and relaxing studio designed to help you unwind the moment you arrive.
+    </p>
+    <div class="card">
+      <p>
+        This is a space created for restoration—where you can take deep, calming breaths, release stress, and allow your body to naturally relax.
+      </p>
+      <p>
+        Our therapeutic approach supports stress relief, relaxation, and overall body function through a variety of massage modalities. Each session is thoughtfully tailored to meet your individual needs, promoting balance, healing, and renewal in a calm and supportive environment.
+      </p>
+      <p><strong>At Teshia Massage, self-care is not a luxury—it’s an essential part of your well-being.</strong></p>
+    </div>
+  </div>
 </section>
 
-<!-- SERVICES -->
+<section id="journey">
+  <div class="wrap">
+    <h2>My Journey</h2>
+    <div class="card">
+      <p>
+        My journey to becoming a holistic health practitioner is deeply rooted in family, faith, and lived experience. My grandfather strongly believed in natural healing, planting the first seeds of understanding that the body has an incredible ability to restore itself when supported properly.
+      </p>
+      <p>
+        In 2004, my life changed dramatically when I experienced three CVAs (strokes) affecting the cerebellum of my brain. This resulted in right-sided weakness, slurred speech, and a blood clot. During that time, I struggled significantly with prescription medications and ultimately made the decision to pursue a path of natural healing.
+      </p>
+      <p>
+        Inspired by my grandfather, Remus Townend, I committed fully to holistic health. I enrolled at Healing Hands Holistic Health School in Escondido, California, located on Mission Avenue, choosing to trust the path unfolding before me.
+      </p>
+      <p>
+        Today, I feel clear, grounded, and deeply grateful. My experiences—both challenging and transformative—shape the compassionate, intentional care I now offer.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section id="services">
-<div class="wrap">
-<div class="sectionTitle">
-<h2>Services</h2>
-<p>Therapeutic and spa-based modalities designed for healing and renewal.</p>
-</div>
-<div class="grid2">
-<div class="contentCard">
-<h3>Therapeutic Bodywork</h3>
-<div class="pillList">
-<div class="pill">Deep Tissue</div>
-<div class="pill">Swedish</div>
-<div class="pill">Myofascial Release</div>
-<div class="pill">Cranial Sacral</div>
-</div>
-</div>
-<div class="contentCard">
-<h3>Signature Treatments</h3>
-<div class="pillList">
-<div class="pill">Mud Wraps</div>
-<div class="pill">Seaweed Gel</div>
-<div class="pill">Salt Therapy</div>
-<div class="pill">Cupping</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="wrap">
+    <h2>Signature Services</h2>
+    <div class="grid">
+      <div class="card">
+        <p>
+          At Suite 4, every experience is designed to restore your body, mind, and spirit. As a licensed massage therapist, I blend deep tissue therapy with holistic, faith-centered treatments to help you release tension, detoxify, and reconnect with your inner balance.
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Indulge in mineral-rich mud wraps, nourishing seaweed gel applications, salt treatments, and glow brushing—all curated to promote circulation, rejuvenate your skin, and leave you feeling radiant and renewed.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- MODALITIES -->
 <section id="modalities">
-<div class="wrap">
-<div class="sectionTitle">
-<h2>Integrated Modalities</h2>
-<p>Blended techniques supporting mobility, detoxification, and relaxation.</p>
-</div>
-<div class="modalities">
-<div class="mod"><strong>Passive Joint Movement</strong></div>
-<div class="mod"><strong>Therapeutic Stretching</strong></div>
-<div class="mod"><strong>Cranial Sacral Therapy</strong></div>
-<div class="mod"><strong>Myofascial Release</strong></div>
-<div class="mod"><strong>Somatic Bodywork</strong></div>
-<div class="mod"><strong>Reflexology</strong></div>
-</div>
-</div>
+  <div class="wrap">
+    <h2>Integrated Modalities</h2>
+    <div class="mod-list">
+      <div class="mod"><strong>Passive Joint Movement</strong> Gentle, assisted joint mobilization to improve range of motion and reduce stiffness.</div>
+      <div class="mod"><strong>Therapeutic Stretching</strong> Customized techniques to lengthen tight muscles and enhance circulation.</div>
+      <div class="mod"><strong>Cranial Sacral Therapy</strong> Light-touch therapy that calms the nervous system and promotes balance.</div>
+      <div class="mod"><strong>Myofascial Release</strong> Sustained pressure to release deep fascial restrictions.</div>
+      <div class="mod"><strong>Somatic Bodywork</strong> Mind-body techniques to release stored tension.</div>
+      <div class="mod"><strong>Traditional Oriental Dynamic Cupping</strong> Supports circulation and detoxification.</div>
+      <div class="mod"><strong>Swedish & Therapeutic Massage</strong> Flowing techniques to ease tension and improve blood flow.</div>
+      <div class="mod"><strong>Deep Tissue Techniques</strong> Focused work addressing chronic pain and imbalances.</div>
+      <div class="mod"><strong>Reflexology</strong> Targeted pressure stimulating healing.</div>
+      <div class="mod"><strong>Aromatherapy Integration</strong> Essential oils enhancing mood and relaxation.</div>
+    </div>
+    <p class="lead" style="margin-top:30px;">
+      🌿 Personalized care. Purposeful touch. Lasting results.
+    </p>
+  </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-<div class="wrap">
-<div class="ctaBand">
-<div>
-<h3>Begin Your Restorative Journey</h3>
-<p>Schedule your customized session today.</p>
-</div>
-<a class="btn" href="#">Book Now</a>
-</div>
-</div>
+  <div class="wrap">
+    <h2>Begin Your Restorative Journey</h2>
+    <p class="lead">
+      Schedule your customized session today and experience true restorative wellness.
+    </p>
+    <a class="btn" href="#">Book Now</a>
+  </div>
 </section>
 
 </main>
 
 <footer>
-<div class="wrap">
-© <span id="year"></span> Teshia Massage • All rights reserved
-</div>
+  <div class="wrap">
+    © <span id="year"></span> Teshia Massage • Escondido, CA • All rights reserved
+  </div>
 </footer>
 
 <script>

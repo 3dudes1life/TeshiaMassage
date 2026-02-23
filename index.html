@@ -835,7 +835,6 @@ function toggleMenu(){
 <!-- ===========================
      CONTACT
 =========================== -->
-
 <section id="contact" style="padding:120px 0; border-top:1px solid var(--line);">
 
   <div class="container">
@@ -872,7 +871,6 @@ function toggleMenu(){
   </div>
 
 </section>
-
 
 
 <!-- ===========================
@@ -1028,6 +1026,16 @@ document.querySelectorAll('.faq-question').forEach(btn=>{
     const answer = btn.nextElementSibling;
     answer.style.display = answer.style.display === "block" ? "none" : "block";
   });
+});
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  // Clear form
+  this.reset();
+
+  // Show success message
+  document.getElementById("formSuccess").style.display = "block";
 });
 
 </script>

@@ -58,15 +58,20 @@
    GLOBAL
 =========================== */
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
   background:var(--greenMain);
-  color:var(--textSoft);
+  color:#ffffff; /* default body text now white */
   font-family:Inter,sans-serif;
-  line-height:1.75;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -76,6 +81,10 @@ body{
   margin:auto;
 }
 
+/* ===========================
+   GLOBAL SECTION SYSTEM
+=========================== */
+
 section{
   padding:110px 0;
   position:relative;
@@ -83,6 +92,29 @@ section{
 
 section:not(:first-of-type){
   border-top:1px solid var(--line);
+}
+
+/* Main section titles */
+section h2{
+  color:var(--greenDark);
+  font-size:44px;
+  margin-bottom:18px;
+  font-weight:600;
+}
+
+/* Sub-titles inside sections */
+section h3{
+  color:var(--greenDark);
+  font-size:18px;
+  font-weight:600;
+  margin:28px 0 6px;
+}
+
+/* Paragraph text inside sections */
+section p{
+  color:#ffffff;
+  font-size:15px;
+  line-height:1.6;
 }
 
 /* ===========================

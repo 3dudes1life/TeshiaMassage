@@ -233,28 +233,31 @@ nav a:hover{
   gap:20px;
 }
 /* ===========================
-   MODALITIES REFINED
+   MODALITIES CLEAN HIERARCHY
 =========================== */
 
-#modalities .container > h3{
-  color:var(--greenDark);
-  font-family:"Playfair Display",serif;
-  font-size:20px;
-  font-weight:500;
-  margin:28px 0 6px;
-  letter-spacing:.3px;
+/* Section Title (leave elegant + light) */
+#modalities > .container > h2 {
+  color: var(--textWhite);
 }
 
-#modalities .container > p{
-  color:#ffffff;
-  font-size:15px;
-  line-height:1.6;
-  margin:0 0 18px;
-  max-width:650px;
+/* Only the stacked modality titles */
+#modalities .container h3 {
+  color: var(--greenDark);
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 26px 0 6px;
+  letter-spacing: .2px;
 }
-#modalities h3:not(:first-of-type){
-  border-top:1px solid rgba(0,0,0,.15);
-  padding-top:24px;
+
+/* Only the descriptions under them */
+#modalities .container h3 + p {
+  color: rgba(255,255,255,.92);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  max-width: 650px;
 }
 /* ===========================
    RESPONSIVE

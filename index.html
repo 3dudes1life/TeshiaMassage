@@ -132,11 +132,21 @@ nav a:hover{
 =========================== */
 
 .btn{
-  padding:12px 22px;
+  display:inline-block;
+  padding:12px 26px;
   border-radius:30px;
   text-decoration:none;
   font-size:14px;
-  transition:.3s;
+  font-weight:500;
+  background:var(--greenDeep);
+  color:var(--textWhite);
+  border:1px solid rgba(255,255,255,.15);
+  transition:.3s ease;
+}
+
+.btn:hover{
+  background:#0f1a08;
+  transform:translateY(-2px);
 }
 
 .btn-primary{
@@ -946,250 +956,20 @@ function toggleMenu(){
 </footer>
 
 
-
-<!-- ===========================
-     FINAL CSS ADDITIONS
-=========================== -->
-
-<style>
-
-/* ===========================
-   FAQ
-=========================== */
-
-.faq-container{
-  max-width:900px;
-  margin:auto;
-}
-
-.faq-item{
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  margin-bottom:20px;
-  overflow:hidden;
-  background:rgba(255,255,255,.04);
-  transition:.3s;
-}
-
-.faq-item:hover{
-  background:rgba(255,255,255,.07);
-}
-
-.faq-question{
-  width:100%;
-  background:none;
-  border:none;
-  padding:20px 25px;
-  text-align:left;
-  font-size:16px;
-  color:var(--textWhite);
-  cursor:pointer;
-  font-weight:500;
-}
-
-.faq-answer{
-  padding:0 25px 20px 25px;
-  display:none;
-  color:var(--textMuted);
-  font-size:14px;
-}
-
-/* ===========================
-   CONTACT
-=========================== */
-
-.contact-wrapper{
-  max-width:800px;
-  margin:auto;
-}
-
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-input, textarea{
-  width:100%;
-  padding:14px 18px;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  color:var(--textWhite);
-  margin-bottom:20px;
-}
-
-textarea{
-  min-height:140px;
-  resize:vertical;
-}
-
-input:focus, textarea:focus{
-  outline:none;
-  border-color:rgba(255,255,255,.4);
-  background:rgba(255,255,255,.08);
-}
-
-/* ===========================
-   FOOTER RESPONSIVE
-=========================== */
-
-@media(max-width:900px){
-  .form-row{
-    grid-template-columns:1fr;
-  }
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-/* ===========================
-   COLOR HIERARCHY SYSTEM
-=========================== */
-
-/* Main large section titles */
-.section-title,
-h2{
-  color:#243b14; /* deep forest */
-}
-
-/* Sub headings (modalities titles) */
-.mod-card h3{
-  color:#2e4a18; /* slightly lighter forest */
-}
-
-/* Body text */
-p{
-  color:rgba(0,0,0,.78);
-}
-
-/* Small intro text under titles */
-.section-intro{
-  color:#35581d; /* muted sage */
-}
-
-/* Thin separators */
-.mod-card{
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.15);
-  backdrop-filter:blur(6px);
-}
-
-/* Accent cream / white highlight */
-.accent{
-  color:#ffffff;
-}
-
-/* Strong statements */
-strong{
-  color:#ffffff;
-}
-
-/* Navigation links */
-header a{
-  color:#f4f1dc;
-}
-
-header a:hover{
-  color:#ffffff;
-}
-
-/* Buttons */
-.hero .btn-primary{
-  background:#1e2f0f;
-  color:#ffffff;
-}
-
-.hero .btn-outline{
-  border:2px solid #ffffff;
-  color:#ffffff;
-  background:transparent;
-}
-
-.hero .btn-outline:hover{
-  background:#ffffff;
-  color:#243b14;
-}
-  /* ===========================
-   MONOCHROME HIERARCHY FIX
-=========================== */
-
-/* Main section titles */
-.section-title,
-h2{
-  color:#ffffff;
-}
-
-/* Sub headings */
-h3{
-  color:#1e2f0f;
-}
-
-/* Body text */
-p{
-  color:rgba(0,0,0,.75);
-}
-
-/* Smaller intro text */
-.section-intro{
-  color:rgba(255,255,255,.75);
-}
-
-/* Lines / separators */
-.mod-card{
-  border-bottom:1px solid rgba(0,0,0,.2);
-}
-
-/* Make certain key phrases white */
-strong{
-  color:#ffffff;
-}
-
-/* Navigation links */
-header a{
-  color:#ffffff;
-}
-
-header a:hover{
-  color:#f4f1dc;
-}
-/* ===========================
-   SECTION CONTRAST SYSTEM
-=========================== */
-
-/* White section headings */
-section:nth-of-type(even) h2,
-section:nth-of-type(even) h3{
-  color:#243b14;
-}
-
-/* White section body text */
-section:nth-of-type(even) p{
-  color:#3a4d1f;
-}
-</style>
-
-
-
 <!-- ===========================
      FINAL SCRIPT
 =========================== -->
 
+
 <script>
 
-/* Mobile Menu Toggle (Fixed) */
-
+/* Mobile Menu Toggle */
 function toggleMenu(){
   const menu = document.getElementById("mobileMenu");
-  if(menu.style.display === "flex"){
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
 /* Close mobile menu when clicking link */
-
 document.querySelectorAll('.mobile-menu a').forEach(link=>{
   link.addEventListener('click',()=>{
     document.getElementById("mobileMenu").style.display="none";
@@ -1197,25 +977,11 @@ document.querySelectorAll('.mobile-menu a').forEach(link=>{
 });
 
 /* FAQ Accordion */
-
 document.querySelectorAll('.faq-question').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const answer = btn.nextElementSibling;
     answer.style.display = answer.style.display === "block" ? "none" : "block";
   });
 });
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  // Clear form
-  this.reset();
-
-  // Show success message
-  document.getElementById("formSuccess").style.display = "block";
-});
 
 </script>
-
-</body>
-</html>

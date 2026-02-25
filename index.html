@@ -37,16 +37,14 @@
 =========================== */
 
 :root{
-  --black:#6f8f1e;      /* main bright green */
-  --black2:#8fae2e;     /* lighter green blend */
+  --black:#1e2a0f;      /* dark olive base */
+  --black2:#2b3a14;     /* slightly lighter */
 
-  --gold:#3a3a1a;       /* dark olive accent instead of gold */
-  --goldSoft:rgba(58,58,26,.15);
+  --accentGreen:#8fae2e;   /* bin color */
 
-  --text:#1b1b1b;       /* DARK TEXT now, not white */
-  --muted:rgba(27,27,27,.7);
-
-  --line:rgba(0,0,0,.1);
+  --gold:#e0c46a;
+  --text:#f8f8f5;
+  --muted:rgba(248,248,245,.75);
 }
 
 /* ===========================
@@ -148,7 +146,7 @@ header{
   top:0;
   left:0;
   width:100%;
-  background:rgba(11,11,12,.85);
+  background: #1a240d;
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
   z-index:999;
@@ -247,37 +245,54 @@ nav a:hover{
 
 .hero{
   padding:160px 0 120px;
+
+  /* Bright spa green but with depth */
+  background:linear-gradient(
+    180deg,
+    #7fa125 0%,
+    #8fae2e 100%
+  );
+
+  /* Dark readable text */
+  color:#1b1b1b;
 }
 
+/* Small top label */
 .hero-tag{
   display:inline-block;
-  border:1px solid var(--gold);
+  border:1px solid rgba(27,27,27,.5);
   padding:10px 20px;
   border-radius:40px;
   font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
-  color:var(--gold);
+  color:#1b1b1b;
   margin-bottom:30px;
+  background:rgba(255,255,255,.15);
 }
 
+/* Main headline */
 .hero h2{
   font-family:"Playfair Display",serif;
   font-size:54px;
   margin:0 0 20px;
   line-height:1.15;
+  text-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
+/* Optional gold highlight word */
 .hero h2 span{
-  color:var(--gold);
+  color:#2f2f15; /* darker accent instead of gold */
 }
 
+/* Paragraph */
 .hero p{
   max-width:700px;
-  color:var(--muted);
+  color:rgba(27,27,27,.85);
   font-size:18px;
 }
 
+/* Buttons container */
 .hero-buttons{
   margin-top:40px;
   display:flex;

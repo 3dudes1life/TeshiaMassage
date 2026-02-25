@@ -1056,40 +1056,60 @@ input:focus, textarea:focus{
    CONTRAST & READABILITY FIXES
 =========================== */
 
-/* Headings hierarchy */
-h1, h2{
-  color:#1e2f0f;
+/* ===========================
+   COLOR HIERARCHY SYSTEM
+=========================== */
+
+/* Main large section titles */
+.section-title,
+h2{
+  color:#243b14; /* deep forest */
 }
 
-h3{
-  color:#2b3d12;
+/* Sub headings (modalities titles) */
+.mod-card h3{
+  color:#2e4a18; /* slightly lighter forest */
 }
 
+/* Body text */
 p{
-  color:rgba(0,0,0,.75);
+  color:rgba(0,0,0,.78);
 }
 
-/* Section layering */
-section:nth-of-type(even){
-  background:rgba(0,0,0,.05);
+/* Small intro text under titles */
+.section-intro{
+  color:#35581d; /* muted sage */
 }
 
-/* Modality spacing */
+/* Thin separators */
 .mod-card{
-  padding:25px 0;
-  border-bottom:1px solid rgba(0,0,0,.15);
+  border-bottom:1px solid rgba(0,0,0,.18);
 }
 
-/* Fix outline button visibility */
+/* Accent highlights */
+strong{
+  color:#f4f1dc; /* soft cream accent */
+}
+
+/* Navigation links */
+header a{
+  color:#f4f1dc;
+}
+
+header a:hover{
+  color:#ffffff;
+}
+
+/* Buttons */
 .hero .btn-outline{
-  background:#ffffff;
-  border:2px solid #1e2f0f;
-  color:#1e2f0f;
+  background:#f4f1dc;
+  border:2px solid #243b14;
+  color:#243b14;
 }
 
 .hero .btn-outline:hover{
-  background:#1e2f0f;
-  color:#ffffff;
+  background:#243b14;
+  color:#f4f1dc;
 }
 
 </style>

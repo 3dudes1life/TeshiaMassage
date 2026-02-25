@@ -123,10 +123,21 @@ header{
   text-transform:uppercase;
 }
 
-nav{
+.desktop-nav{
   display:flex;
   gap:28px;
   align-items:center;
+}
+
+.desktop-nav a{
+  text-decoration:none;
+  color:var(--textSoft);
+  font-size:14px;
+  transition:.3s ease;
+}
+
+.desktop-nav a:hover{
+  color:var(--textWhite);
 }
 
 nav a{
@@ -255,10 +266,17 @@ nav a:hover{
 
 @media(max-width:900px){
 
-  nav{ display:none; }
-  .menu-toggle{ display:block; }
+  .desktop-nav{
+    display:none;
+  }
 
-  .hero h2{ font-size:38px; }
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero h2{
+    font-size:38px;
+  }
 
 }
 

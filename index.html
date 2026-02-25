@@ -324,6 +324,27 @@ nav a:hover{
   background:#1e2f0f;
   color:#ffffff;
 }
+  /* ===========================
+   SUBTLE BAMBOO OVERLAY
+=========================== */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-100px;
+  bottom:-100px;
+  width:600px;
+  height:600px;
+  background:url("bamboo-outline.png") no-repeat;
+  background-size:contain;
+  opacity:0.04;
+  pointer-events:none;
+}
    /* ===========================
    MY STORY TIMELINE
 =========================== */
@@ -1053,10 +1074,6 @@ input:focus, textarea:focus{
 }
 
 /* ===========================
-   CONTRAST & READABILITY FIXES
-=========================== */
-
-/* ===========================
    COLOR HIERARCHY SYSTEM
 =========================== */
 
@@ -1111,7 +1128,26 @@ header a:hover{
   background:#243b14;
   color:#f4f1dc;
 }
+/* ===========================
+   SECTION CONTRAST SYSTEM
+=========================== */
 
+/* Alternate white sections */
+section:nth-of-type(even){
+  background:#ffffff;
+  color:#243b14;
+}
+
+/* White section headings */
+section:nth-of-type(even) h2,
+section:nth-of-type(even) h3{
+  color:#243b14;
+}
+
+/* White section body text */
+section:nth-of-type(even) p{
+  color:#3a4d1f;
+}
 </style>
 
 

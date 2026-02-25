@@ -233,22 +233,23 @@ nav a:hover{
   gap:20px;
 }
 /* ===========================
-   MODALITIES – DARK TITLES
+   MODALITIES SPACING REFINED
 =========================== */
 
-/* Make section title dark */
-#modalities h2{
-  color: var(--greenDark);
-}
-
-/* Make modality titles dark */
+/* Tight space between title + its description */
 #modalities h3{
-  color: var(--greenDark);
+  margin-bottom: 6px;
 }
 
-/* Keep description text white */
-#modalities p{
-  color: #ffffff;
+/* Reduce space directly under description */
+#modalities h3 + p{
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+/* Add larger space before next title */
+#modalities h3:not(:first-of-type){
+  margin-top: 34px;
 }
 /* ===========================
    RESPONSIVE

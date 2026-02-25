@@ -233,23 +233,38 @@ nav a:hover{
   gap:20px;
 }
 /* ===========================
-   MODALITIES SPACING REFINED
+   MODALITIES – FINAL CLEAN VERSION
 =========================== */
 
-/* Tight space between title + its description */
-#modalities h3{
-  margin-bottom: 6px;
+/* Section title */
+#modalities > .container > h2{
+  color: var(--greenDark) !important;
+  font-size: 44px;              /* slightly strong but elegant */
+  margin-bottom: 14px;
 }
 
-/* Reduce space directly under description */
-#modalities h3 + p{
-  margin-top: 0;
-  margin-bottom: 26px;
+/* Intro paragraph under section title */
+#modalities > .container > p{
+  color: #ffffff !important;
+  margin-bottom: 36px;
 }
 
-/* Add larger space before next title */
-#modalities h3:not(:first-of-type){
-  margin-top: 34px;
+/* Individual modality titles */
+#modalities .container h3{
+  color: var(--greenDark) !important;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 28px 0 6px;
+  letter-spacing: .2px;
+}
+
+/* Description text under each title */
+#modalities .container h3 + p{
+  color: #ffffff !important;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 26px;
+  max-width: 650px;
 }
 /* ===========================
    RESPONSIVE

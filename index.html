@@ -261,6 +261,10 @@ nav a:hover{
 
   /* Main readable text */
   color:#1a1a1a;
+
+  /* Required for bamboo overlay */
+  position:relative;
+  overflow:hidden;
 }
 
 /* Small top label */
@@ -289,13 +293,13 @@ nav a:hover{
 
 /* Highlight word */
 .hero h2 span{
-  color:#1e2f0f;
+  color:#ffffff; /* make this white for contrast */
 }
 
 /* Paragraph */
 .hero p{
   max-width:700px;
-  color:rgba(26,26,26,.75);
+  color:rgba(0,0,0,.75);
   font-size:18px;
 }
 
@@ -315,23 +319,19 @@ nav a:hover{
 
 /* Outline button */
 .hero .btn-outline{
-  background:#ffffff;
-  border:2px solid #1e2f0f;
-  color:#1e2f0f;
+  border:2px solid #ffffff;
+  color:#ffffff;
+  background:transparent;
 }
 
 .hero .btn-outline:hover{
-  background:#1e2f0f;
-  color:#ffffff;
+  background:#ffffff;
+  color:#243b14;
 }
-  /* ===========================
+
+/* ===========================
    SUBTLE BAMBOO OVERLAY
 =========================== */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-}
 
 .hero::after{
   content:"";
@@ -342,7 +342,7 @@ nav a:hover{
   height:600px;
   background:url("bamboo-outline.png") no-repeat;
   background-size:contain;
-  opacity:0.04;
+  opacity:0.035; /* keep under .04 */
   pointer-events:none;
 }
    /* ===========================
@@ -1125,25 +1125,67 @@ header a:hover{
 }
 
 /* Buttons */
+.hero .btn-primary{
+  background:#1e2f0f;
+  color:#ffffff;
+}
+
 .hero .btn-outline{
-  background:#f4f1dc;
-  border:2px solid #243b14;
-  color:#243b14;
+  border:2px solid #ffffff;
+  color:#ffffff;
+  background:transparent;
 }
 
 .hero .btn-outline:hover{
-  background:#243b14;
+  background:#ffffff;
+  color:#243b14;
+}
+  /* ===========================
+   MONOCHROME HIERARCHY FIX
+=========================== */
+
+/* Main section titles */
+.section-title,
+h2{
+  color:#ffffff;
+}
+
+/* Sub headings */
+h3{
+  color:#1e2f0f;
+}
+
+/* Body text */
+p{
+  color:rgba(0,0,0,.75);
+}
+
+/* Smaller intro text */
+.section-intro{
+  color:rgba(255,255,255,.75);
+}
+
+/* Lines / separators */
+.mod-card{
+  border-bottom:1px solid rgba(0,0,0,.2);
+}
+
+/* Make certain key phrases white */
+strong{
+  color:#ffffff;
+}
+
+/* Navigation links */
+header a{
+  color:#ffffff;
+}
+
+header a:hover{
   color:#f4f1dc;
 }
 /* ===========================
    SECTION CONTRAST SYSTEM
 =========================== */
-
-/* Alternate white sections */
-section:nth-of-type(even){
-  background:#ffffff;
-  color:#243b14;
-}
 
 /* White section headings */
 section:nth-of-type(even) h2,

@@ -33,25 +33,20 @@
 <style>
 
 /* ===========================
-   ROOT VARIABLES
+   ROOT SYSTEM
 =========================== */
 
 :root{
-  /* Bright bin green background */
   --greenMain:#8fae2e;
-
-  /* Dark green for header + depth */
   --greenDark:#1e2f0f;
+  --greenDeep:#16240c;
 
-  /* Text system */
-  --text:#1a1a1a;
-  --textLight:#f5f5f0;
-  --muted:rgba(26,26,26,.7);
+  --textWhite:#ffffff;
+  --textSoft:rgba(255,255,255,.85);
+  --textMuted:rgba(255,255,255,.65);
 
-  /* Accent instead of gold */
-  --accent:#2b3d12;
+  --line:rgba(255,255,255,.12);
 
-  --line:rgba(0,0,0,.15);
   --radius:18px;
   --max:1180px;
 }
@@ -66,7 +61,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   background:var(--greenMain);
-  color:var(--text);
+  color:var(--textSoft);
   font-family:Inter,sans-serif;
   line-height:1.65;
 }
@@ -76,76 +71,7 @@ body{
   max-width:var(--max);
   margin:auto;
 }
-/* ===========================
-   STUDIO GRID
-=========================== */
 
-.studio-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:30px;
-}
-
-.studio-card{
-  padding:35px;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  transition:.3s;
-}
-
-.studio-card:hover{
-  border-color:var(--gold);
-  background:var(--goldSoft);
-}
-
-.studio-card h3{
-  margin-top:0;
-  font-family:"Playfair Display",serif;
-  font-size:20px;
-  margin-bottom:12px;
-}
-
-.studio-card p{
-  color:var(--muted);
-}
-
-/* ===========================
-   LOCATION
-=========================== */
-
-.location-card{
-  max-width:750px;
-  margin:60px auto 0;
-  padding:50px;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  text-align:center;
-}
-
-.location-details{
-  color:var(--muted);
-  display:grid;
-  gap:12px;
-  margin-top:20px;
-}
-
-.location-details strong{
-  color:var(--text);
-}
-
-@media(max-width:900px){
-
-  .studio-grid{
-    grid-template-columns:1fr;
-  }
-
-  .location-card{
-    padding:35px;
-  }
-
-}
 /* ===========================
    HEADER
 =========================== */
@@ -155,10 +81,10 @@ header{
   top:0;
   left:0;
   width:100%;
-  background:--greenDark:#1e2f0f;
-  color:--textLight:#f5f5f0;
+  background:var(--greenDark);
+  color:var(--textWhite);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(255,255,255,.08);
   z-index:999;
 }
 
@@ -169,21 +95,17 @@ header{
   padding:18px 0;
 }
 
-.brand{
-  display:flex;
-  flex-direction:column;
-}
-
 .brand h1{
   font-family:"Playfair Display",serif;
   font-size:20px;
   margin:0;
   font-weight:600;
+  color:var(--textWhite);
 }
 
 .brand span{
   font-size:12px;
-  color:var(--muted);
+  color:var(--textMuted);
   letter-spacing:.12em;
   text-transform:uppercase;
 }
@@ -196,57 +118,47 @@ nav{
 
 nav a{
   text-decoration:none;
-  color:var(--textLight);
+  color:var(--textSoft);
   font-size:14px;
   transition:.3s;
 }
 
 nav a:hover{
-  color:var(--text);
+  color:var(--textWhite);
 }
 
+/* ===========================
+   BUTTONS
+=========================== */
+
 .btn{
-  padding:10px 20px;
+  padding:12px 22px;
   border-radius:30px;
-  border:1px solid var(--gold);
-  color:var(--gold);
   text-decoration:none;
   font-size:14px;
   transition:.3s;
 }
 
-.btn:hover{
-  background:var(--gold);
-  color:#000;
-}
-
-/* ===========================
-   MOBILE MENU
-=========================== */
-
-.menu-toggle{
-  display:none;
-  font-size:24px;
-  cursor:pointer;
-}
-
-.mobile-menu{
-  display:none;
-  flex-direction:column;
-  background:#111;
-  padding:20px;
-  border-top:1px solid var(--line);
-}
-
-.mobile-menu a{
-  padding:12px 0;
-  text-decoration:none;
-  color:var(--muted);
-  border-bottom:1px solid var(--line);
-}
-
-.mobile-menu a:last-child{
+.btn-primary{
+  background:var(--greenDeep);
+  color:var(--textWhite);
   border:none;
+}
+
+.btn-primary:hover{
+  background:#0f1a08;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border:2px solid var(--textWhite);
+  color:var(--textWhite);
+  background:transparent;
+}
+
+.btn-outline:hover{
+  background:var(--textWhite);
+  color:var(--greenDark);
 }
 
 /* ===========================
@@ -255,84 +167,48 @@ nav a:hover{
 
 .hero{
   padding:160px 0 120px;
-
-  /* Flat bright green */
-  background:#8fae2e;
-
-  /* Main readable text */
-  color:#1a1a1a;
-
-  /* Required for bamboo overlay */
   position:relative;
   overflow:hidden;
 }
 
-/* Small top label */
 .hero-tag{
   display:inline-block;
-  border:2px solid #2b3d12;
+  border:1px solid rgba(255,255,255,.4);
   padding:10px 20px;
   border-radius:40px;
   font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
-  color:#2b3d12;
+  color:var(--textWhite);
   margin-bottom:30px;
-  background:rgba(255,255,255,.25);
-  font-weight:600;
+  background:rgba(255,255,255,.1);
 }
 
-/* Main headline */
 .hero h2{
   font-family:"Playfair Display",serif;
   font-size:56px;
   margin:0 0 20px;
   line-height:1.1;
-  color:#2b3d12;
+  color:var(--textWhite);
 }
 
-/* Highlight word */
 .hero h2 span{
-  color:#ffffff; /* make this white for contrast */
+  color:rgba(255,255,255,.75);
 }
 
-/* Paragraph */
 .hero p{
   max-width:700px;
-  color:rgba(0,0,0,.75);
+  color:var(--textSoft);
   font-size:18px;
 }
 
-/* Buttons container */
 .hero-buttons{
   margin-top:40px;
   display:flex;
   gap:20px;
 }
 
-/* Primary button */
-.hero .btn{
-  background:#1e2f0f;
-  color:#f5f5f0;
-  border:none;
-}
-
-/* Outline button */
-.hero .btn-outline{
-  border:2px solid #ffffff;
-  color:#ffffff;
-  background:transparent;
-}
-
-.hero .btn-outline:hover{
-  background:#ffffff;
-  color:#243b14;
-}
-
-/* ===========================
-   SUBTLE BAMBOO OVERLAY
-=========================== */
-
+/* Bamboo Overlay */
 .hero::after{
   content:"";
   position:absolute;
@@ -342,11 +218,74 @@ nav a:hover{
   height:600px;
   background:url("bamboo-outline.png") no-repeat;
   background-size:contain;
-  opacity:0.035; /* keep under .04 */
+  opacity:.035;
   pointer-events:none;
 }
-   /* ===========================
-   MY STORY TIMELINE
+
+/* ===========================
+   SECTION HEADINGS
+=========================== */
+
+section h2{
+  font-family:"Playfair Display",serif;
+  font-size:42px;
+  color:var(--textWhite);
+  margin-bottom:20px;
+}
+
+section p{
+  color:var(--textSoft);
+}
+
+/* ===========================
+   CARDS (MODALITIES / STUDIO)
+=========================== */
+
+.card{
+  padding:35px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  transition:.35s ease;
+}
+
+.card:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.3);
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.card h3{
+  margin-top:0;
+  font-family:"Playfair Display",serif;
+  font-size:20px;
+  color:var(--textWhite);
+  margin-bottom:12px;
+}
+
+.card p{
+  color:var(--textMuted);
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+@media(max-width:900px){
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===========================
+   TIMELINE
 =========================== */
 
 .story-timeline{
@@ -362,28 +301,22 @@ nav a:hover{
   top:0;
   bottom:0;
   width:2px;
-  background:var(--line);
+  background:rgba(255,255,255,.2);
 }
 
 .story-item{
   position:relative;
   margin-bottom:50px;
-  display:flex;
-  gap:20px;
 }
 
 .story-marker{
   width:14px;
   height:14px;
-  background:var(--text);
+  background:var(--textWhite);
   border-radius:50%;
   position:absolute;
   left:-26px;
   top:8px;
-}
-
-.story-marker.gold{
-  background:var(--gold);
 }
 
 .story-content h3{
@@ -391,23 +324,48 @@ nav a:hover{
   font-family:"Playfair Display",serif;
   font-size:20px;
   margin-bottom:10px;
+  color:var(--textWhite);
 }
 
 .story-content p{
-  color:var(--muted);
-  font-size:15px;
+  color:var(--textMuted);
 }
 
-@media(max-width:900px){
+/* ===========================
+   LOCATION CARD
+=========================== */
 
-  .story-timeline{
-    padding-left:25px;
-  }
+.location-card{
+  max-width:750px;
+  margin:60px auto 0;
+  padding:50px;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  text-align:center;
+}
 
-  .story-marker{
-    left:-18px;
-  }
+.location-details{
+  color:var(--textMuted);
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
 
+.location-details strong{
+  color:var(--textWhite);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+  margin-top:100px;
+  padding:40px 0;
+  text-align:center;
+  color:var(--textMuted);
+  border-top:1px solid rgba(255,255,255,.1);
 }
 /* ===========================
    THERAPEUTIC APPROACH
@@ -995,7 +953,9 @@ function toggleMenu(){
 
 <style>
 
-/* FAQ */
+/* ===========================
+   FAQ
+=========================== */
 
 .faq-container{
   max-width:900px;
@@ -1007,6 +967,12 @@ function toggleMenu(){
   border-radius:var(--radius);
   margin-bottom:20px;
   overflow:hidden;
+  background:rgba(255,255,255,.04);
+  transition:.3s;
+}
+
+.faq-item:hover{
+  background:rgba(255,255,255,.07);
 }
 
 .faq-question{
@@ -1016,7 +982,7 @@ function toggleMenu(){
   padding:20px 25px;
   text-align:left;
   font-size:16px;
-  color:var(--text);
+  color:var(--textWhite);
   cursor:pointer;
   font-weight:500;
 }
@@ -1024,11 +990,13 @@ function toggleMenu(){
 .faq-answer{
   padding:0 25px 20px 25px;
   display:none;
-  color:var(--muted);
+  color:var(--textMuted);
   font-size:14px;
 }
 
-/* Contact */
+/* ===========================
+   CONTACT
+=========================== */
 
 .contact-wrapper{
   max-width:800px;
@@ -1046,8 +1014,8 @@ input, textarea{
   padding:14px 18px;
   border-radius:var(--radius);
   border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  color:var(--text);
+  background:rgba(255,255,255,.05);
+  color:var(--textWhite);
   margin-bottom:20px;
 }
 
@@ -1058,10 +1026,13 @@ textarea{
 
 input:focus, textarea:focus{
   outline:none;
-  border-color:var(--gold);
+  border-color:rgba(255,255,255,.4);
+  background:rgba(255,255,255,.08);
 }
 
-/* Footer */
+/* ===========================
+   FOOTER RESPONSIVE
+=========================== */
 
 @media(max-width:900px){
   .form-row{
@@ -1072,7 +1043,6 @@ input:focus, textarea:focus{
     text-align:center;
   }
 }
-
 /* ===========================
    COLOR HIERARCHY SYSTEM
 =========================== */

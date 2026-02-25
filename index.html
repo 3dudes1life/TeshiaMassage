@@ -199,12 +199,19 @@ nav a:hover{
   font-size:60px;
   margin:0 0 25px;
   line-height:1.05;
-  color:var(--textWhite);
   letter-spacing:-.5px;
 }
 
-.hero h2 span{
-  color:rgba(255,255,255,.75);
+.hero h2 span:nth-child(1){
+  color:#ffffff; /* bright */
+}
+
+.hero h2 span:nth-child(2){
+  color:#f4f7ec; /* soft ivory */
+}
+
+.hero h2 span:nth-child(3){
+  color:#dce8b5; /* subtle sage pop */
 }
 
 .hero p{
@@ -374,25 +381,116 @@ footer{
   .approach-grid{
     grid-template-columns:1fr;
   }
-}
+
 /* ===========================
    RESPONSIVE
 =========================== */
 
+/* Hide hamburger by default */
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+  color:var(--textWhite);
+}
+
+/* Mobile Styles */
 @media(max-width:900px){
 
-  nav{display:none;}
-  .menu-toggle{display:block;}
+  nav{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:20px;
+    background:var(--greenDark);
+    padding:30px;
+    position:absolute;
+    top:100%;
+    right:0;
+    width:260px;
+    border-radius:0 0 0 18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+  }
+
+  .mobile-menu a{
+    color:var(--textWhite);
+    text-decoration:none;
+    font-size:15px;
+  }
 
   .hero h2{
     font-size:38px;
   }
 
 }
+    /* ===========================
+       HEADER NAV CONTROL
+    ============================ */
 
+    .desktop-nav{
+      display:flex;
+      gap:28px;
+      align-items:center;
+    }
+
+    .menu-toggle{
+      display:none;
+      font-size:24px;
+      cursor:pointer;
+      color:var(--textWhite);
+    }
+
+    @media(max-width:900px){
+
+      .desktop-nav{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .mobile-menu{
+        display:none;
+        flex-direction:column;
+        gap:20px;
+        background:var(--greenDark);
+        padding:30px;
+        position:absolute;
+        top:100%;
+        right:0;
+        width:260px;
+        border-radius:0 0 0 18px;
+        box-shadow:0 20px 50px rgba(0,0,0,.35);
+      }
+
+      .mobile-menu a{
+        color:var(--textWhite);
+        text-decoration:none;
+      }
+
+    }
 </style>
 </head>
+  ...
+  <!-- all your sections above -->
 
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById("mobileMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+
+</body>
+</html>
 <body>
 
 <header>
@@ -403,7 +501,8 @@ footer{
       <span>Holistic Bodywork • Deep Tissue • Escondido</span>
     </div>
 
-    <nav>
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
       <a href="#modalities">Modalities</a>
       <a href="#approach">Approach</a>
       <a href="#story">My Story</a>
@@ -412,8 +511,19 @@ footer{
       <a href="#contact" class="btn">Schedule</a>
     </nav>
 
+    <!-- Mobile Toggle -->
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#modalities">Modalities</a>
+    <a href="#approach">Approach</a>
+    <a href="#story">My Story</a>
+    <a href="#studio">Studio</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn">Schedule</a>
   </div>
 
 </header>
@@ -425,10 +535,10 @@ footer{
   </div>
 
   <h2>
-    Restore your body.<br>
-    Renew your mind.<br>
-    <span>Reconnect your spirit.</span>
-  </h2>
+  <span>Restore your body.</span><br>
+  <span>Renew your mind.</span><br>
+  <span>Reconnect your spirit.</span>
+</h2>
 
   <p>
     I am a holistic health practitioner and deep tissue specialist who blends multiple therapeutic modalities to support the body’s natural healing process. My mission is to encourage repeated, intentional self-care that nurtures physical, emotional, and overall wellness through customized bodywork.

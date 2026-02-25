@@ -233,31 +233,22 @@ nav a:hover{
   gap:20px;
 }
 /* ===========================
-   MODALITIES CLEAN HIERARCHY
+   MODALITIES – DARK TITLES
 =========================== */
 
-/* Section Title (leave elegant + light) */
-#modalities > .container > h2 {
-  color: var(--textWhite);
-}
-
-/* Only the stacked modality titles */
-#modalities .container h3 {
+/* Make section title dark */
+#modalities h2{
   color: var(--greenDark);
-  font-family: "Playfair Display", serif;
-  font-size: 19px;
-  font-weight: 500;
-  margin: 26px 0 6px;
-  letter-spacing: .2px;
 }
 
-/* Only the descriptions under them */
-#modalities .container h3 + p {
-  color: rgba(255,255,255,.92);
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0 0 18px;
-  max-width: 650px;
+/* Make modality titles dark */
+#modalities h3{
+  color: var(--greenDark);
+}
+
+/* Keep description text white */
+#modalities p{
+  color: #ffffff;
 }
 /* ===========================
    RESPONSIVE

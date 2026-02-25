@@ -37,14 +37,23 @@
 =========================== */
 
 :root{
-  --black:#1e2a0f;      /* dark olive base */
-  --black2:#2b3a14;     /* slightly lighter */
+  /* Bright bin green background */
+  --greenMain:#8fae2e;
 
-  --accentGreen:#8fae2e;   /* bin color */
+  /* Dark green for header + depth */
+  --greenDark:#1e2f0f;
 
-  --gold:#e0c46a;
-  --text:#f8f8f5;
-  --muted:rgba(248,248,245,.75);
+  /* Text system */
+  --text:#1a1a1a;
+  --textLight:#f5f5f0;
+  --muted:rgba(26,26,26,.7);
+
+  /* Accent instead of gold */
+  --accent:#2b3d12;
+
+  --line:rgba(0,0,0,.15);
+  --radius:18px;
+  --max:1180px;
 }
 
 /* ===========================
@@ -56,7 +65,7 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  background:linear-gradient(180deg,var(--black),var(--black2));
+  background:var(--greenMain);
   color:var(--text);
   font-family:Inter,sans-serif;
   line-height:1.65;
@@ -146,7 +155,8 @@ header{
   top:0;
   left:0;
   width:100%;
-  background: #1a240d;
+  background:--greenDark:#1e2f0f;
+  color:--textLight:#f5f5f0;
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
   z-index:999;
@@ -186,7 +196,7 @@ nav{
 
 nav a{
   text-decoration:none;
-  color:var(--muted);
+  color:var(--textLight);
   font-size:14px;
   transition:.3s;
 }
@@ -246,49 +256,46 @@ nav a:hover{
 .hero{
   padding:160px 0 120px;
 
-  /* Bright spa green but with depth */
-  background:linear-gradient(
-    180deg,
-    #7fa125 0%,
-    #8fae2e 100%
-  );
+  /* Flat bright green */
+  background:#8fae2e;
 
-  /* Dark readable text */
-  color:#1b1b1b;
+  /* Main readable text */
+  color:#1a1a1a;
 }
 
 /* Small top label */
 .hero-tag{
   display:inline-block;
-  border:1px solid rgba(27,27,27,.5);
+  border:2px solid #2b3d12;
   padding:10px 20px;
   border-radius:40px;
   font-size:12px;
   letter-spacing:.1em;
   text-transform:uppercase;
-  color:#1b1b1b;
+  color:#2b3d12;
   margin-bottom:30px;
-  background:rgba(255,255,255,.15);
+  background:rgba(255,255,255,.25);
+  font-weight:600;
 }
 
 /* Main headline */
 .hero h2{
   font-family:"Playfair Display",serif;
-  font-size:54px;
+  font-size:56px;
   margin:0 0 20px;
-  line-height:1.15;
-  text-shadow:0 4px 20px rgba(0,0,0,.15);
+  line-height:1.1;
+  color:#2b3d12;
 }
 
-/* Optional gold highlight word */
+/* Highlight word */
 .hero h2 span{
-  color:#2f2f15; /* darker accent instead of gold */
+  color:#1e2f0f;
 }
 
 /* Paragraph */
 .hero p{
   max-width:700px;
-  color:rgba(27,27,27,.85);
+  color:rgba(26,26,26,.75);
   font-size:18px;
 }
 
@@ -297,6 +304,20 @@ nav a:hover{
   margin-top:40px;
   display:flex;
   gap:20px;
+}
+
+/* Primary button */
+.hero .btn{
+  background:#1e2f0f;
+  color:#f5f5f0;
+  border:none;
+}
+
+/* Outline button */
+.hero .btn-outline{
+  background:transparent;
+  border:2px solid #1e2f0f;
+  color:#1e2f0f;
 }
    /* ===========================
    MY STORY TIMELINE
